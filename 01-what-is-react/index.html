@@ -23,6 +23,13 @@
     </script> -->
     <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+    <script>
+        //how to add heading the react way
+        const heading = React.createElement("h1", { id: "heading" }, "welcome to react");
+        const root = ReactDOM.createRoot(document.querySelector("#root"));
+        root.render(heading);
+    </script>
 </body>
 
 </html>
