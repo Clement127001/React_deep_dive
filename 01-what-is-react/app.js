@@ -37,6 +37,6 @@ const nestedComponent = React.createElement("div", { id: "parent" }, [
 
 console.log(nestedComponent);
 
-const root = ReactDOM.createRoot(document.querySelector("#root"));
+const root = ReactDOM.createRoot(document.querySelector("#root")); //creating the root instance where the elements are going to be  rendered
 // console.log(root);
 root.render(nestedComponent); //this is where the actual magic is happening
