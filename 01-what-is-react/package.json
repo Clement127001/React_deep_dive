@@ -1,0 +1,26 @@
+{
+  "name": "01-what-is-react",
+  "version": "1.0.0",
+  "description": "all about the behind the scene working knowledge to ignite our application to productoin ready",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clement127001/React_deep_dive.git#main"
+  },
+  "keywords": [
+    "react",
+    "parcel"
+  ],
+  "author": "Babiyon Clement",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clement127001/React_deep_dive/issues"
+  },
+  "homepage": "https://github.com/Clement127001/React_deep_dive/tree/main#readme",
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+  
+}

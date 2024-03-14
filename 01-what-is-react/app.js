@@ -1,9 +1,12 @@
 //how to add heading the react way
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "welcome to react - created by react"
-); //heading the js object to be rendered by react
+
+// //<h1>Welcome to react - created by react</h1>
+// const heading = React.createElement(
+//   "h1",
+//   { id: "heading" },
+//   "welcome to react - created by react"
+// );
+
 // console.log(heading);
 
 //creating the nested structure using the react.createElement()
@@ -23,20 +26,16 @@ const heading = React.createElement(
 </div>
 */
 
-//Jsx -> react element(object) -> render() -> h1
-const nestedComponent = React.createElement("div", { id: "parent" }, [
+const nestedElement = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child1", key: "child1" }, [
-    React.createElement("h1", { key: "h1" }, "Heading tag h1"),
-    React.createElement("h2", { key: "h2" }, "Heading tag h2"),
+    React.createElement("h1", { key: "heading 1" }, "Heading tag h1"),
+    React.createElement("h2", { key: "heading2" }, "Heading tag h2"),
   ]),
   React.createElement("div", { id: "child2", key: "child2" }, [
-    React.createElement("h1", { key: "h1" }, "Heading tag h1"),
-    React.createElement("h2", { key: "h2" }, "Heading tag h2"),
+    React.createElement("h1", { key: "heading1" }, "Heading tag h1"),
+    React.createElement("h2", { key: "heading2" }, "Heading tag h2"),
   ]),
 ]);
 
-console.log(nestedComponent);
-
-const root = ReactDOM.createRoot(document.querySelector("#root")); //creating the root instance where the elements are going to be  rendered
-// console.log(root);
-root.render(nestedComponent); //this is where the actual magic is happening
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+root.render(nestedElement);
