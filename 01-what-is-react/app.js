@@ -14,9 +14,6 @@
 
 // root.render(heading);
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-
 // const Component = () => {
 //   return (
 //     <div>
@@ -38,14 +35,39 @@ import ReactDOM from "react-dom/client";
 // };
 // const root = ReactDOM.createRoot(document.querySelector("#root"));
 // root.render(/*#__PURE__*/ _jsx("Component", {}));
-import { jsx as _jsx } from "react/jsx-runtime";
-const Component = () => {
-  return /*#__PURE__*/ _jsx("div", {
-    children: /*#__PURE__*/ _jsx("h1", {
-      children: "This is the work done by babel, but I am transpiling myself",
-    }),
-  });
-};
+// import { jsx as _jsx } from "react/jsx-runtime";
+// const Component = () => {
+//   return /*#__PURE__*/ _jsx("div", {
+//     id: "heading-container",
+//     children: /*#__PURE__*/ _jsx("h1", {
+//       id: "heading",
+//       children: "This is the work done by babel, but I am transpiling myself",
+//     }),
+//   });
+// };
+
+// console.log("This is done before calling the component, am I right");
+
+// const root = ReactDOM.createRoot(document.querySelector("#root"));
+// root.render(/*#__PURE__*/ _jsx(Component, {}));
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+//working with functional component
+function Title() {
+  return <h1>Title component</h1>;
+}
+
+//component composition
+function MainComponent() {
+  return (
+    <div className="container">
+      <Title />
+      <p>This is component composition</p>
+    </div>
+  );
+}
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(/*#__PURE__*/ _jsx(Component, {}));
+root.render(<MainComponent />);
