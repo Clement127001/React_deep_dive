@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "all about the behind the scene working knowledge to ignite our application to productoin ready",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,14 @@
   },
   "homepage": "https://github.com/Clement127001/React_deep_dive/tree/main#readme",
   "dependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "devDependencies": {
+    "process": "^0.11.10"
   }
-  
 }
