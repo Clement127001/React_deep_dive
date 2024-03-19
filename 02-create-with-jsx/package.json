@@ -1,0 +1,33 @@
+{
+  "name": "02-create-with-jsx",
+  "version": "1.0.0",
+  "description": "this is the place where the developer meet most loveable jsx",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clement127001/React_deep_dive.git#main"
+  },
+  "keywords": [
+    "jsx",
+    "react"
+  ],
+  "author": "Clement",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clement127001/React_deep_dive/issues"
+  },
+  "homepage": "https://github.com/Clement127001/React_deep_dive/tree/main#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
