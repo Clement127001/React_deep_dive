@@ -1,0 +1,27 @@
+{
+  "name": "03-intro-to-react-ecosystem",
+  "version": "1.0.0",
+  "description": "this document will contain all the things that are required to build a strong foundation for the strong knowledge for the react based ecosystem ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [
+    "react",
+    "jsx",
+    "props",
+    "component"
+  ],
+  "author": "Babiyon Clement",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
