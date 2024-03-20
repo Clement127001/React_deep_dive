@@ -145,6 +145,8 @@ table {
     padding: 0.5rem 2rem;
     border-radius: 1rem;
     box-shadow: 1px 3px 30px -14px rgba(0, 0, 0, 0.75);
+    background-color: white;
+    z-index: 2;
 }
 
 .logo {
@@ -188,4 +190,94 @@ table {
 /* search */
 .search-container {
     margin-bottom: 1rem;
+}
+
+.restaurants-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* restaurants cards */
+.card-container {
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+}
+
+.restaurant-card {
+    width: 300px;
+    /* outline: 2px solid red; */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.restaurant-card:hover {
+    box-shadow: 1px 3px 30px -14px rgba(0, 0, 0, 0.75);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+}
+
+.restaurant-info>h3 {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+.restaurant-info>p {
+    color: #6c6c6c;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    margin: 0.75rem 0 1rem 0;
+}
+
+.restuarant-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.restuarant-group span {
+    width: 4px;
+    height: 4px;
+    margin-inline: 4px;
+    background-color: #6c6c6c;
+    border-radius: 50%;
+}
+
+.restaurant-action {
+    place-self: flex-end;
+    margin-block: 1.5rem 0.5rem;
+    background-color: #cc522d;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
 }

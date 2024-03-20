@@ -8,7 +8,7 @@ function Main() {
     <div className="restaurant-container">
       <Header />
       <Restaurants />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
