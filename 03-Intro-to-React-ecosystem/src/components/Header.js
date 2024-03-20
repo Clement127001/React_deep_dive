@@ -1,5 +1,5 @@
 import React from "react";
-import FoodAppLogo from "../logo.png";
+import FoodAppLogo from "../../logo.png";
 
 export default Header = () => {
   return (

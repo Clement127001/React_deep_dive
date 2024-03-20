@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../data.js";
+import data from "../utils/data.js";
 import RestaurantCard from "./RestaurantCard.js";
 
 export default Restaurants = () => {

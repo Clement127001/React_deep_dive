@@ -1,5 +1,5 @@
 import React from "react";
-
+import { IMG_URL } from "../utils/constants";
 const RestaurantCard = ({ resData }) => {
   const {
     id,
@@ -12,12 +12,7 @@ const RestaurantCard = ({ resData }) => {
   } = resData;
   return (
     <div className="restaurant-card">
-      <img
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      />
+      <img src={IMG_URL + cloudinaryImageId} />
       <div className="restaurant-info">
         <h3>{name}</h3>
         <p>{cuisines.join(", ")}</p>
