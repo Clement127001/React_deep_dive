@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = <h1>This is the heading element</h1>;
+import Main from "./Main";
+
+const App = () => (
+  <>
+    <Main />
+  </>
+);
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(heading);
+root.render(<App />);

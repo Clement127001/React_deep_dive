@@ -1,4 +1,4 @@
-[
+export default data = [
   {
     info: {
       id: "851738",
