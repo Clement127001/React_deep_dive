@@ -134,6 +134,18 @@ table {
     position: relative;
 }
 
+.primary-btn {
+    place-self: flex-end;
+    margin-block: 1.5rem 0.5rem;
+    background-color: #cc522d;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 /* header */
 
 .header {
@@ -181,6 +193,9 @@ table {
 }
 
 /* restaurants list */
+
+.filter-btn {}
+
 .restaurants-list {
     position: relative;
     top: 100px;
@@ -268,16 +283,4 @@ table {
     margin-inline: 4px;
     background-color: #6c6c6c;
     border-radius: 50%;
-}
-
-.restaurant-action {
-    place-self: flex-end;
-    margin-block: 1.5rem 0.5rem;
-    background-color: #cc522d;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    padding: 0.75rem 2rem;
-    border-radius: 8px;
-    cursor: pointer;
 }

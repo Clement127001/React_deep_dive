@@ -2,13 +2,12 @@ import React from "react";
 import { IMG_URL } from "../utils/constants";
 const RestaurantCard = ({ resData }) => {
   const {
-    id,
     cloudinaryImageId,
     cuisines,
     name,
     costForTwo,
-    avgRatingString,
-    sla,
+    avgRating,
+    deliveryTime,
   } = resData;
   return (
     <div className="restaurant-card">
@@ -17,14 +16,14 @@ const RestaurantCard = ({ resData }) => {
         <h3>{name}</h3>
         <p>{cuisines.join(", ")}</p>
         <div className="restuarant-group">
-          <p>{avgRatingString}</p>
+          <p>{avgRating ? avgRating : "New"}</p>
           <span></span>
-          <p>{sla.deliveryTime}</p>
+          <p>{deliveryTime} mins</p>
           <span></span>
           <p>{costForTwo}</p>
         </div>
 
-        <button className="restaurant-action">View Details</button>
+        <button className="primary-btn">View Details</button>
       </div>
     </div>
   );
