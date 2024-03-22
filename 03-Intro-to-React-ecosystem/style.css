@@ -206,7 +206,7 @@ table {
 
 /* restaurants list */
 
-.filter-btn {}
+
 
 .restaurants-list {
     position: relative;
@@ -284,7 +284,8 @@ table {
     margin: 0.2rem 0 1rem 0;
 }
 
-.restuarant-group {
+.restuarant-group,
+.shimmer-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -296,4 +297,79 @@ table {
     margin-inline: 4px;
     background-color: #6c6c6c;
     border-radius: 50%;
+}
+
+
+/* for shimmer effect */
+
+.shimmer {
+    opacity: 0.9;
+    /* alternate for smoother transition */
+    animation: shimmer-animation linear infinite 1s alternate;
+    border-radius: 4px;
+}
+
+@keyframes shimmer-animation {
+    0% {
+        background-color: hsl(204, 2%, 60%);
+    }
+
+    100% {
+        background-color: hsl(204, 2%, 95%);
+    }
+}
+
+.shimmer-container {
+
+    position: relative;
+    top: 240px;
+    display: flex;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem 3rem;
+
+}
+
+.shimmer-card {
+    width: 300px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.shimmer-btn {
+    place-self: flex-end;
+    margin-block: 1.5rem 0.5rem;
+    border: none;
+    padding: 1.25rem 4rem;
+}
+
+.shimmer-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+}
+
+.shimmer-info {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h3.shimmer,
+h3~p.shimmer {
+    width: 90%;
+    height: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+h3~p.shimmer {
+    width: 80%;
+}
+
+.shimmer-group p {
+    height: 1rem;
+    width: 2rem;
+    margin-block-start: 0.5rem;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import data from "../utils/data.js";
 import RestaurantCard from "./RestaurantCard.js";
+import Shimmer from "./Shimmer.js";
 
 export default Restaurants = () => {
   //this is also fine
@@ -11,7 +12,7 @@ export default Restaurants = () => {
 
   function filterRestaurants() {
     const newRestaurants = restaurantList.filter(
-      (res) => res.info.avgRating >= 4.5
+      (res) => res.info.avgRating >= 4.3
     );
 
     setRestaurantList(newRestaurants);
@@ -31,9 +32,9 @@ export default Restaurants = () => {
     fetchResturants();
   }, []);
 
-  restaurantList?.map((res) => console.log(res.info.id));
-
-  return (
+  return restaurantList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="restaurants-list">
       <section>
         <button className="primary-btn" onClick={filterRestaurants}>
