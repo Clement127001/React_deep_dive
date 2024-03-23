@@ -263,6 +263,11 @@ table {
     font-family: "Open Sans", sans-serif;
 }
 
+.restuarant-group .star {
+    width: 24px;
+    height: 24px;
+}
+
 .restaurant-info>h3 {
     font-size: 1.1rem;
     line-height: 1.4rem;
@@ -284,6 +289,13 @@ table {
     margin: 0.2rem 0 1rem 0;
 }
 
+.restuarant-group p:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
 .restuarant-group,
 .shimmer-group {
     display: flex;
@@ -291,7 +303,7 @@ table {
     justify-content: space-between;
 }
 
-.restuarant-group span {
+.restuarant-group>span {
     width: 4px;
     height: 4px;
     margin-inline: 4px;

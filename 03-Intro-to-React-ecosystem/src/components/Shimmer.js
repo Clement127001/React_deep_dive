@@ -2,7 +2,8 @@ import React from "react";
 
 const Shimmer = () => {
   let shimmerCards = [];
-  for (i = 0; i < 15; i++) shimmerCards.push(<ShimmerContent />);
+  for (i = 0; i < 15; i++)
+    shimmerCards.push(<ShimmerContent key={"shimmer" + i} />);
   return <div className="shimmer-container">{shimmerCards}</div>;
 };
 

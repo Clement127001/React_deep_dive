@@ -1,5 +1,6 @@
 import React from "react";
 import { IMG_URL } from "../utils/constants";
+import star from "../asset/star2.png";
 const RestaurantCard = ({ resData }) => {
   const {
     cloudinaryImageId,
@@ -16,7 +17,16 @@ const RestaurantCard = ({ resData }) => {
         <h3>{name}</h3>
         <p>{cuisines.join(", ")}</p>
         <div className="restuarant-group">
-          <p>{avgRating ? avgRating : "New"}</p>
+          <p>
+            {avgRating ? avgRating : "New"}
+            {avgRating ? (
+              <span>
+                <img className="star" src={star} />
+              </span>
+            ) : (
+              ""
+            )}
+          </p>
           <span></span>
           <p>{deliveryTime} mins</p>
           <span></span>
