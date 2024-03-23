@@ -146,6 +146,17 @@ table {
     cursor: pointer;
 }
 
+.top-rated {
+    place-self: flex-end;
+    background-color: #cc522d;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .secondary-btn {
     background-color: white;
     color: #cc522d;
@@ -215,8 +226,33 @@ table {
 }
 
 /* search */
+.filters {
+    max-width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
 .search-container {
-    margin-bottom: 1rem;
+    position: relative;
+}
+
+.search-container input {
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    width: 200px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+}
+
+.search-container .close {
+    width: 24px;
+    position: absolute;
+    left: 55%;
+    top: 10px;
+    cursor: pointer;
 }
 
 .restaurants-title {
@@ -264,8 +300,8 @@ table {
 }
 
 .restuarant-group .star {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
 }
 
 .restaurant-info>h3 {

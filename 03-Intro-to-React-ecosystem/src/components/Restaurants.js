@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import data from "../utils/data.js";
 import RestaurantCard from "./RestaurantCard.js";
 import Shimmer from "./Shimmer.js";
+
+import { close } from "../asset/index.js";
 
 export default Restaurants = () => {
   //this is also fine
@@ -12,17 +13,17 @@ export default Restaurants = () => {
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [filterText, setFilterText] = useState(null);
 
-  function filterRestaurants() {
+  const filterRestaurants = () => {
     const newRestaurants = restaurantList.filter(
       (res) => res.info.avgRating >= 4.6
     );
 
     setFilteredRestaurantList(newRestaurants);
-  }
+  };
 
   const fetchResturants = async () => {
     const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const data = await response.json();
     const resData =
@@ -36,16 +37,14 @@ export default Restaurants = () => {
     if (filterText) {
       setFilteredRestaurantList((prev) =>
         prev.filter((res) =>
-          res.info.name.toLowerCase().includes(filterText.toLowerCase())
+          res.info.name.toLowerCase().includes(filterText.trim().toLowerCase())
         )
       );
-
-      // const filteredRestaurant = restaurantList.filter((res) =>
-      //   res.info.name.toLowerCase().includes(filterText.toLowerCase())
-      // );
-
-      // setRestaurantList(filteredRestaurant);
     }
+  };
+
+  const clearFitlerText = () => {
+    setFilterText("");
   };
 
   useEffect(() => {
@@ -59,8 +58,8 @@ export default Restaurants = () => {
     <Shimmer />
   ) : (
     <div className="restaurants-list">
-      <section>
-        <button className="primary-btn" onClick={filterRestaurants}>
+      <section className="filters">
+        <button className="top-rated" onClick={filterRestaurants}>
           Top Rated
         </button>
 
@@ -70,7 +69,17 @@ export default Restaurants = () => {
             value={filterText ? filterText : ""}
             onChange={(e) => setFilterText(e.target.value)}
           />
-          <button onClick={searchRestaurants}>Search</button>
+          {filterText?.length > 0 ? (
+            <span onClick={clearFitlerText}>
+              <img className="close" src={close} />
+            </span>
+          ) : (
+            ""
+          )}
+
+          <button onClick={searchRestaurants} className="secondary-btn">
+            Search
+          </button>
         </div>
       </section>
 

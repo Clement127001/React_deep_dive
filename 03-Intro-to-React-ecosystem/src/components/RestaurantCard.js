@@ -1,6 +1,6 @@
 import React from "react";
 import { IMG_URL } from "../utils/constants";
-import star from "../asset/star2.png";
+import { star } from "../asset";
 const RestaurantCard = ({ resData }) => {
   const {
     cloudinaryImageId,
