@@ -245,6 +245,9 @@ table {
     padding: 0.5rem;
     margin-right: 1rem;
     border-radius: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .search-container .close {
@@ -269,7 +272,9 @@ table {
     justify-content: start;
     column-gap: 1rem;
     row-gap: 1.5rem;
+    margin-left: 1.5rem;
 }
+
 
 .restaurant-card {
     width: 300px;
@@ -420,4 +425,16 @@ h3~p.shimmer {
     height: 1rem;
     width: 2rem;
     margin-block-start: 0.5rem;
+}
+
+.not-found {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found img {
+    width: 400px;
 }

@@ -2,17 +2,14 @@ import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard.js";
 import Shimmer from "./Shimmer.js";
 
-import { close } from "../asset/index.js";
+import { close, foodNotFound } from "../asset/index.js";
 
 export default Restaurants = () => {
-  //this is also fine
-  // const arr = useState(data);
-  // const [restaurantList, setRestaurantList] = arr;
-
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [filterText, setFilterText] = useState(null);
 
+  //filter and search functionalities
   const filterRestaurants = () => {
     const newRestaurants = restaurantList.filter(
       (res) => res.info.avgRating >= 4.6
@@ -66,6 +63,7 @@ export default Restaurants = () => {
         <div className="search-container">
           <input
             type="text"
+            placeholder="Search your favorite spot"
             value={filterText ? filterText : ""}
             onChange={(e) => setFilterText(e.target.value)}
           />
@@ -94,7 +92,9 @@ export default Restaurants = () => {
               />
             ))
           ) : (
-            <h2>No restaurant found</h2>
+            <div className="not-found">
+              <img src={foodNotFound} />
+            </div>
           )}
         </div>
       </section>

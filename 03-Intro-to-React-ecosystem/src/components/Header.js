@@ -16,7 +16,7 @@ export default Header = () => {
       <div className="nav-item">
         <ul>
           <li>Home</li>
-          <li>Restaurants</li>
+          <li>Contact</li>
           <li>About</li>
           <li>Cart</li>
           <button className="secondary-btn" onClick={toggleLogin}>
