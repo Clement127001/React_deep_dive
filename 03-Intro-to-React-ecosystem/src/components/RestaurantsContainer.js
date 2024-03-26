@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard.js";
+import { close } from "../asset/index.js";
 
 export default RestaurantsContainer = ({ data }) => {
   const [restaurantList, setRestaurantList] = useState(data);
@@ -8,6 +9,10 @@ export default RestaurantsContainer = ({ data }) => {
 
   // //filter and search functionalities
   const filterRestaurants = () => {
+    if (filteredRestaurantList.length < restaurantList.length) {
+      setFilteredRestaurantList(data);
+      return;
+    }
     const newRestaurants = restaurantList.filter(
       (res) => res.info.avgRating >= 4.5
     );
@@ -37,10 +42,10 @@ export default RestaurantsContainer = ({ data }) => {
   return (
     <div className="restaurants-list">
       <section className="filters">
-        {" "}
         <button className="top-rated" onClick={filterRestaurants}>
-          {" "}
-          Top Rated{" "}
+          {filteredRestaurantList.length === restaurantList.length
+            ? "Top Rated"
+            : "Show all"}
         </button>
         <div className="search-container">
           <input
