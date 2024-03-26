@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FoodAppLogo from "../../logo.png";
+import { NavLink } from "react-router-dom";
 
 export default Header = () => {
   const [loginStatus, setLoginStatus] = useState("Login");
@@ -15,10 +16,24 @@ export default Header = () => {
 
       <div className="nav-item">
         <ul>
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Cart</li>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/cart">Cart</NavLink>
+          </li>
           <button className="secondary-btn" onClick={toggleLogin}>
             {loginStatus}
           </button>

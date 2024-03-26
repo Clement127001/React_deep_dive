@@ -3,25 +3,34 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Main from "./src/Main";
+import Restaurants, {
+  loader as restaurantsLoader,
+} from "./src/components/Restaurants";
 import About from "./src/components/About";
 import ErrorComponent from "./src/components/ErrorComponent";
-
-const App = () => (
-  <>
-    <Main />
-  </>
-);
+import Contact from "./src/components/Contact";
 
 //configuration
 const route = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Main />,
     errorElement: <ErrorComponent />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    children: [
+      {
+        index: true,
+        element: <Restaurants />,
+        loader: restaurantsLoader,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 
