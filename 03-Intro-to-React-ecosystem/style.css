@@ -175,8 +175,6 @@ table {
 /* header */
 
 .header {
-    position: fixed;
-    width: calc(92%);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -233,10 +231,10 @@ a.active {
 
 .restaurants-list,
 .about,
-.contact {
-    position: relative;
-    top: 100px;
-    margin: 2rem 3rem;
+.contact,
+.shimmer-container,
+.menu-container {
+    margin: 3rem;
 }
 
 /* search */
@@ -387,15 +385,11 @@ a.active {
 }
 
 .shimmer-container {
-
-    position: relative;
-    top: 240px;
     display: flex;
     row-gap: 1rem;
     column-gap: 2rem;
     flex-wrap: wrap;
-    margin: 2rem 3rem;
-
+    padding-top: 8.25rem;
 }
 
 .shimmer-card {
@@ -451,4 +445,57 @@ h3~p.shimmer {
 
 .not-found img {
     width: 400px;
+}
+
+
+/* menus */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-container h2 {
+    align-self: flex-start;
+}
+
+.menu-item {
+    margin-bottom: 2rem;
+}
+
+.menu-item h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.veg,
+.non-veg {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.veg {
+    outline: 2px solid green;
+}
+
+.non-veg {
+    outline: 2px solid red;
+}
+
+.veg>div,
+.non-veg>div {
+    background-color: green;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.non-veg>div {
+    background-color: red;
 }
