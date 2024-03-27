@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard.js";
 import { close } from "../asset/index.js";
-
+import { close, foodNotFound } from "../asset/index.js";
 export default RestaurantsContainer = ({ data }) => {
   const [restaurantList, setRestaurantList] = useState(data);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState(data);

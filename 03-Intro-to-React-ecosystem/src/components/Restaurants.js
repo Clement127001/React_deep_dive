@@ -4,8 +4,6 @@ import Shimmer from "./Shimmer.js";
 
 import RestaurantsContainer from "./RestaurantsContainer.js";
 
-import { close, foodNotFound } from "../asset/index.js";
-
 export default Restaurants = () => {
   //extracting the data from the loader
   const { res } = useLoaderData();

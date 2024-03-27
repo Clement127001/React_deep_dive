@@ -9,6 +9,7 @@ import Restaurants, {
 import About from "./src/components/About";
 import ErrorComponent from "./src/components/ErrorComponent";
 import Contact from "./src/components/Contact";
+import Menu, { loader as menuLoader } from "./src/components/Menus";
 
 //configuration
 const route = createBrowserRouter([
@@ -29,6 +30,11 @@ const route = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <Menu />,
+        loader: menuLoader,
       },
     ],
   },

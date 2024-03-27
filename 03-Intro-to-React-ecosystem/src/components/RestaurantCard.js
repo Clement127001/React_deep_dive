@@ -1,8 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { IMG_URL } from "../utils/constants";
 import { star } from "../asset";
+
 const RestaurantCard = ({ resData }) => {
   const {
+    id,
     cloudinaryImageId,
     cuisines,
     name,
@@ -33,7 +36,9 @@ const RestaurantCard = ({ resData }) => {
           <p>{costForTwo}</p>
         </div>
 
-        <button className="primary-btn">View Details</button>
+        <NavLink to={"/restaurants/" + id} className="primary-btn">
+          View Details
+        </NavLink>
       </div>
     </div>
   );
