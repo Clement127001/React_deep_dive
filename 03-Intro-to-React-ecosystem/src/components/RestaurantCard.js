@@ -15,7 +15,7 @@ const RestaurantCard = ({ resData }) => {
   } = resData;
   return (
     <div className="restaurant-card">
-      <img src={IMG_URL + cloudinaryImageId} />
+      <img src={IMG_URL + cloudinaryImageId} alt={name} />
       <div className="restaurant-info">
         <h3>{name}</h3>
         <p>{cuisines.join(", ")}</p>
@@ -24,7 +24,7 @@ const RestaurantCard = ({ resData }) => {
             {avgRating ? avgRating : "New"}
             {avgRating ? (
               <span>
-                <img className="star" src={star} />
+                <img className="star" src={star} alt="star-rating" />
               </span>
             ) : (
               ""
@@ -36,7 +36,7 @@ const RestaurantCard = ({ resData }) => {
           <p>{costForTwo}</p>
         </div>
 
-        <NavLink to={"/restaurants/" + id} className="primary-btn">
+        <NavLink to={"/restaurants/" + id} className="primary-btn btn">
           View Details
         </NavLink>
       </div>

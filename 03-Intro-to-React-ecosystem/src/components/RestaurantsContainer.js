@@ -34,6 +34,7 @@ export default RestaurantsContainer = ({ data }) => {
   };
 
   useEffect(() => {
+    console.log("I am called once");
     if (filterText === "") {
       setFilteredRestaurantList(restaurantList);
     }
@@ -42,7 +43,10 @@ export default RestaurantsContainer = ({ data }) => {
   return (
     <div className="restaurants-list">
       <section className="filters">
-        <button className="top-rated" onClick={filterRestaurants}>
+        <button
+          className="top-rated btn primary-btn"
+          onClick={filterRestaurants}
+        >
           {filteredRestaurantList.length === restaurantList.length
             ? "Top Rated"
             : "Show all"}
@@ -56,13 +60,13 @@ export default RestaurantsContainer = ({ data }) => {
           />
           {filterText?.length > 0 ? (
             <span onClick={clearFitlerText}>
-              <img className="close" src={close} />
+              <img className="close" src={close} alt="clear" />
             </span>
           ) : (
             ""
           )}
 
-          <button onClick={searchRestaurants} className="secondary-btn">
+          <button onClick={searchRestaurants} className="secondary-btn btn">
             Search
           </button>
         </div>
@@ -80,7 +84,7 @@ export default RestaurantsContainer = ({ data }) => {
             ))
           ) : (
             <div className="not-found">
-              <img src={foodNotFound} />
+              <img src={foodNotFound} alt="food-not-found" />
             </div>
           )}
         </div>

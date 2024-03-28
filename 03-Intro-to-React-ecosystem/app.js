@@ -11,7 +11,7 @@ import ErrorComponent from "./src/components/ErrorComponent";
 import Contact from "./src/components/Contact";
 import Menu, { loader as menuLoader } from "./src/components/Menus";
 
-//configuration
+//configuration for client side routing
 const route = createBrowserRouter([
   {
     path: "/",

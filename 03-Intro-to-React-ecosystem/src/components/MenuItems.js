@@ -4,7 +4,10 @@ const MenuItems = ({ menus, title }) => {
   return (
     menus && (
       <div className="menu-item">
-        <h3>{title}</h3>
+        <h2 className="heading">
+          {title + " -  "}
+          <span>{menus.length}</span>
+        </h2>
         {menus.map((item) => (
           <MenuItem dish={item?.card?.info} key={item?.card?.info.id} />
         ))}

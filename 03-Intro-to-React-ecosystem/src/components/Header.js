@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FoodAppLogo from "../../logo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default Header = () => {
   const [loginStatus, setLoginStatus] = useState("Login");
@@ -11,7 +11,10 @@ export default Header = () => {
   return (
     <nav className="header">
       <div className="logo">
-        <img src={FoodAppLogo} />
+        <Link to="/">
+          {" "}
+          <img src={FoodAppLogo} alt="home page" />
+        </Link>
       </div>
 
       <div className="nav-item">
@@ -34,7 +37,7 @@ export default Header = () => {
           <li>
             <NavLink to="/cart">Cart</NavLink>
           </li>
-          <button className="secondary-btn" onClick={toggleLogin}>
+          <button className="secondary-btn btn" onClick={toggleLogin}>
             {loginStatus}
           </button>
         </ul>
