@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard.js";
 import { close } from "../asset/index.js";
 import { close, foodNotFound } from "../asset/index.js";
+
 export default RestaurantsContainer = ({ data }) => {
   const [restaurantList, setRestaurantList] = useState(data);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState(data);
   const [filterText, setFilterText] = useState(null);
+
+  console.log("I am rendering");
 
   // //filter and search functionalities
   const filterRestaurants = () => {
@@ -34,7 +37,6 @@ export default RestaurantsContainer = ({ data }) => {
   };
 
   useEffect(() => {
-    console.log("I am called once");
     if (filterText === "") {
       setFilteredRestaurantList(restaurantList);
     }

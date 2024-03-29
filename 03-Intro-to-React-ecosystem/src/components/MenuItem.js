@@ -10,7 +10,7 @@ const MenuItem = ({ dish }) => {
     <div className="dish">
       <div className="dish-image">
         {imageId ? (
-          <img src={IMG_URL + imageId} alt={name} />
+          <img src={IMG_URL + imageId} alt={name} loading="lazy" />
         ) : (
           <p>No image availabe</p>
         )}

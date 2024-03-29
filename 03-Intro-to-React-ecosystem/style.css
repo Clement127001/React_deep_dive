@@ -493,7 +493,7 @@ h3~p.shimmer {
 }
 
 .res-open {
-    color: #1cb547;
+    color: #128232;
 }
 
 .res-close {
@@ -624,7 +624,7 @@ h3~p.shimmer {
     line-height: 1.2rem;
     font-weight: 400;
     margin-bottom: 0.75rem;
-    color: #787878;
+    color: #727272;
 }
 
 
@@ -655,8 +655,8 @@ h3~p.shimmer {
 }
 
 .button-add {
-    color: #56be73;
-    outline: 1.25px solid#56be73;
+    color: #39824d;
+    outline: 1.25px solid#39824d;
     background-color: transparent;
     font-weight: 600;
     margin-top: 1rem;

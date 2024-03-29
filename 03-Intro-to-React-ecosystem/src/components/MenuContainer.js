@@ -22,7 +22,11 @@ const MenuContainer = ({ menus }) => {
   return (
     <div className="menu-container">
       <div className="res-details">
-        <img src={IMG_URL + cloudinaryImageId} alt={name + " dish image"} />
+        <img
+          src={IMG_URL + cloudinaryImageId}
+          alt={name + " dish image"}
+          loading="lazy"
+        />
 
         <div className="res-info">
           <h2 className="heading">{name}</h2>
