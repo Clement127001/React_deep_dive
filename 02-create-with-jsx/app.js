@@ -5,9 +5,10 @@ import ReactDOM from "react-dom/client";
 //adding it using the jsx syntax
 const heading = React.createElement(
   "h1",
-  {},
+  { key: "child 1", id: "child-1-element" },
   "This is the heading using react element"
 );
+console.log(heading);
 
 //using the jsx to create the simple header
 
@@ -15,7 +16,10 @@ const heading2 = <h1>This is heading using jsx</h1>;
 
 const Heading2 = () => <h1>This is heading using jsx</h1>;
 
-const heading3 = React.createElement("div", {}, [heading, <Heading2 />]);
+const heading3 = React.createElement("div", {}, [
+  heading,
+  <Heading2 key="child 2" />,
+]);
 
 //using component to build header
 const Heading = () => (
@@ -26,7 +30,9 @@ const Heading = () => (
     </p>
   </header>
 );
-//using functional component -> embedding the component within another component is called compound component
+
+console.log(<Heading />);
+//using functional component -> embedding the component within another component is called  component composition
 const Home = () => (
   <div>
     {/* {heading}
