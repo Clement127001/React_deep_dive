@@ -15,7 +15,7 @@ const RestaurantCard = ({ resData }) => {
   } = resData;
   return (
     <div className="restaurant-card">
-      <img src={IMG_URL + cloudinaryImageId} alt={name} loading="lazy" />
+      <img src={IMG_URL + cloudinaryImageId} alt={name} />
       <div className="restaurant-info">
         <h3>{name}</h3>
         <p>{cuisines.join(", ")}</p>

@@ -3,12 +3,10 @@ import RestaurantCard from "./RestaurantCard.js";
 import { close } from "../asset/index.js";
 import { close, foodNotFound } from "../asset/index.js";
 
-export default RestaurantsContainer = ({ data }) => {
+const RestaurantsContainer = ({ data }) => {
   const [restaurantList, setRestaurantList] = useState(data);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState(data);
   const [filterText, setFilterText] = useState(null);
-
-  console.log("I am rendering");
 
   // //filter and search functionalities
   const filterRestaurants = () => {
@@ -34,13 +32,8 @@ export default RestaurantsContainer = ({ data }) => {
 
   const clearFitlerText = () => {
     setFilterText("");
+    setFilteredRestaurantList(restaurantList);
   };
-
-  useEffect(() => {
-    if (filterText === "") {
-      setFilteredRestaurantList(restaurantList);
-    }
-  }, [filterText]);
 
   return (
     <div className="restaurants-list">
@@ -94,3 +87,5 @@ export default RestaurantsContainer = ({ data }) => {
     </div>
   );
 };
+
+export default RestaurantsContainer;
