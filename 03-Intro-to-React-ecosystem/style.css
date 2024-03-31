@@ -663,4 +663,49 @@ h3~p.shimmer {
     max-width: max-content;
 }
 
-/*  */
+/*offline  */
+
+.offline-indicator {
+    position: fixed;
+    bottom: 2rem;
+    right: 45%;
+    background-color: #d1d1ff;
+    padding: 1rem 3rem;
+    border-radius: 16px;
+    animation: fade-in ease-in 400ms;
+
+}
+
+.offline-indicator h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+}
+
+.offline-indicator p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-top: 0.25rem;
+    font-weight: 400;
+}
+
+.online-status {
+    display: flex;
+    align-items: center;
+
+}
+
+
+@keyframes fade-in {
+    0% {
+        bottom: 0rem;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 2rem;
+        opacity: 1;
+    }
+}

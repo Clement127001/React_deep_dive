@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import FoodAppLogo from "../../logo.png";
+import { logo, online, offline } from "../asset";
 import { Link, NavLink } from "react-router-dom";
+import useOnlineStatus from "../utils/Hooks/useOnlineStatus";
 
 export default Header = () => {
   const [loginStatus, setLoginStatus] = useState("Login");
@@ -8,17 +9,28 @@ export default Header = () => {
   const toggleLogin = () => {
     setLoginStatus((prev) => (prev === "Login" ? "Logout" : "Login"));
   };
+
+  const isOnline = useOnlineStatus();
+
   return (
     <nav className="header">
       <div className="logo">
         <Link to="/">
           {" "}
-          <img src={FoodAppLogo} alt="home page" />
+          <img src={logo} alt="home page" />
         </Link>
       </div>
 
       <div className="nav-item">
         <ul>
+          <li className="online-status">
+            status :
+            {isOnline ? (
+              <img src={online} alt="online" width={36} height={36} />
+            ) : (
+              "🛬"
+            )}
+          </li>
           <li>
             <NavLink
               to="/"

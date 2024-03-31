@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import RestaurantCard from "./RestaurantCard.js";
 import { close } from "../asset/index.js";
 import { close, foodNotFound } from "../asset/index.js";
+import useOnlineStatus from "../utils/Hooks/useOnlineStatus.js";
 
 const RestaurantsContainer = ({ data }) => {
   const [restaurantList, setRestaurantList] = useState(data);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState(data);
   const [filterText, setFilterText] = useState(null);
 
-  // //filter and search functionalities
+  //filter and search functionalities
   const filterRestaurants = () => {
     if (filteredRestaurantList.length < restaurantList.length) {
       setFilteredRestaurantList(data);
@@ -34,6 +35,8 @@ const RestaurantsContainer = ({ data }) => {
     setFilterText("");
     setFilteredRestaurantList(restaurantList);
   };
+
+  const onlineStatus = useOnlineStatus();
 
   return (
     <div className="restaurants-list">
@@ -83,6 +86,13 @@ const RestaurantsContainer = ({ data }) => {
             </div>
           )}
         </div>
+
+        {!onlineStatus && (
+          <div className="offline-indicator">
+            <h3>You are offline</h3>
+            <p>Please connect to internet</p>
+          </div>
+        )}
       </section>
     </div>
   );
