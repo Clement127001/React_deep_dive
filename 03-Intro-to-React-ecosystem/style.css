@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body,
 div,
@@ -242,6 +246,7 @@ a.active {
     align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
 }
 
 .search-container {
@@ -254,7 +259,6 @@ a.active {
     padding: 0.5rem;
     margin-right: 1rem;
     border-radius: 8px;
-    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     font-weight: 500;
 }
@@ -307,7 +311,7 @@ a.active {
 }
 
 .restaurant-info {
-    margin: 1rem;
+    margin: 1rem 1.25rem 2rem;
     display: flex;
     flex-direction: column;
     font-family: "Open Sans", sans-serif;
@@ -370,6 +374,7 @@ a.active {
     /* alternate for smoother transition */
     animation: shimmer-animation linear infinite 1s alternate;
     border-radius: 4px;
+    padding-bottom: 1rem;
 }
 
 @keyframes shimmer-animation {
@@ -391,17 +396,11 @@ a.active {
 }
 
 .shimmer-card {
+    padding-bottom: 1rem;
     width: 300px;
     border-radius: 8px;
     background-color: #f0f0f0;
     overflow: hidden;
-}
-
-.shimmer-btn {
-    place-self: flex-end;
-    margin-block: 1.5rem 0.5rem;
-    border: none;
-    padding: 1.25rem 4rem;
 }
 
 .shimmer-image {
@@ -461,7 +460,7 @@ h3~p.shimmer {
 }
 
 .res-details {
-    min-width: 500px;
+    min-width: 600px;
     background-color: #f5f5ff;
     padding: 1.5rem;
     border-radius: 16px;
@@ -672,7 +671,7 @@ h3~p.shimmer {
     background-color: #d1d1ff;
     padding: 1rem 3rem;
     border-radius: 16px;
-    animation: fade-in ease-in 400ms;
+    animation: fade-in ease-in-out 800ms;
 
 }
 

@@ -23,8 +23,6 @@ function ShimmerContent() {
             <span></span>
             <p className="shimmer"></p>
           </div>
-
-          <button className="shimmer-btn shimmer"></button>
         </div>
       </div>
     </>

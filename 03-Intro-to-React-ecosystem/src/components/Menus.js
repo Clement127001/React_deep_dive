@@ -1,11 +1,11 @@
 import { Suspense } from "react";
 import { Await, defer, json, useLoaderData } from "react-router-dom";
-import Shimmer from "./Shimmer";
 import MenuContainer from "./MenuContainer";
+import MenuShimmer from "./Shimmers/MenuShimmer";
 const Menu = () => {
   const { menus } = useLoaderData();
   return (
-    <Suspense fallback={<Shimmer />}>
+    <Suspense fallback={<MenuShimmer />}>
       <Await resolve={menus}>
         {(menuList) => <MenuContainer menus={menuList} />}
       </Await>

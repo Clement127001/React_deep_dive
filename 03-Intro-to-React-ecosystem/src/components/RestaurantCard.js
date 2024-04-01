@@ -14,33 +14,31 @@ const RestaurantCard = ({ resData }) => {
     deliveryTime,
   } = resData;
   return (
-    <div className="restaurant-card">
-      <img src={IMG_URL + cloudinaryImageId} alt={name} />
-      <div className="restaurant-info">
-        <h3>{name}</h3>
-        <p>{cuisines.join(", ")}</p>
-        <div className="restuarant-group">
-          <p>
-            {avgRating ? avgRating : "New"}
-            {avgRating ? (
-              <span>
-                <img className="star" src={star} alt="star-rating" />
-              </span>
-            ) : (
-              ""
-            )}
-          </p>
-          <span></span>
-          <p>{deliveryTime} mins</p>
-          <span></span>
-          <p>{costForTwo}</p>
+    <NavLink to={"/restaurants/" + id}>
+      <div className="restaurant-card">
+        <img src={IMG_URL + cloudinaryImageId} alt={name} />
+        <div className="restaurant-info">
+          <h3>{name}</h3>
+          <p>{cuisines.join(", ")}</p>
+          <div className="restuarant-group">
+            <p>
+              {avgRating ? avgRating : "New"}
+              {avgRating ? (
+                <span>
+                  <img className="star" src={star} alt="star-rating" />
+                </span>
+              ) : (
+                ""
+              )}
+            </p>
+            <span></span>
+            <p>{deliveryTime} mins</p>
+            <span></span>
+            <p>{costForTwo}</p>
+          </div>
         </div>
-
-        <NavLink to={"/restaurants/" + id} className="primary-btn btn">
-          View Details
-        </NavLink>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

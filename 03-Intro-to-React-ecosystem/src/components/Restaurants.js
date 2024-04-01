@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Await, defer, useLoaderData } from "react-router-dom";
-import Shimmer from "./Shimmer.js";
+import Shimmer from "./Shimmers/Shimmer.js";
 
 import RestaurantsContainer from "./RestaurantsContainer.js";
 
