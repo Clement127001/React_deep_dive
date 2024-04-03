@@ -5,5 +5,6 @@ import location from "./location_pin.png";
 import online from "./online.png";
 import offline from "./off.png";
 import logo from "./logo.png";
+import loginBg from "./login.webp";
 
-export { star, close, foodNotFound, location, online, offline, logo };
+export { star, close, foodNotFound, location, online, offline, logo, loginBg };

@@ -708,3 +708,16 @@ h3~p.shimmer {
         opacity: 1;
     }
 }
+
+.login-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* z-index: -1; */
+    background-image: url('./src/asset/login.webp');
+    opacity: 0.92;
+}
+
+.login {
+    font-family: "Open Sans", sans-serif;
+}

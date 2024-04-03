@@ -10,6 +10,7 @@ import About from "./src/components/About";
 import ErrorComponent from "./src/components/ErrorComponent";
 import Contact from "./src/components/Contact";
 import Menu, { loader as menuLoader } from "./src/components/Menus";
+import Login, { loginAction } from "./src/components/Login";
 
 //configuration for client side routing
 const route = createBrowserRouter([
@@ -30,6 +31,11 @@ const route = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+        action: loginAction,
       },
       {
         path: "/restaurants/:resId",

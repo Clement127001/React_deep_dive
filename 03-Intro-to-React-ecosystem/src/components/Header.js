@@ -1,16 +1,20 @@
-import React, { useState } from "react";
-import { logo, online, offline } from "../asset";
+import { logo, online } from "../asset";
 import { Link, NavLink } from "react-router-dom";
 import useOnlineStatus from "../utils/Hooks/useOnlineStatus";
+import { useState, useEffect } from "react";
 
 export default Header = () => {
-  const [loginStatus, setLoginStatus] = useState("Login");
-
-  const toggleLogin = () => {
-    setLoginStatus((prev) => (prev === "Login" ? "Logout" : "Login"));
-  };
-
   const isOnline = useOnlineStatus();
+
+  const [user, setUser] = useState("");
+
+  // useEffect(() => {
+  //   let userTimer;
+
+  //   fun();
+
+  //   return () => clearTimeout(userTimer);
+  // }, []);
 
   return (
     <nav className="header">
@@ -43,15 +47,15 @@ export default Header = () => {
             <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
-          </li>
-
-          <li>
             <NavLink to="/cart">Cart</NavLink>
           </li>
-          <button className="secondary-btn btn" onClick={toggleLogin}>
-            {loginStatus}
-          </button>
+          {!user ? (
+            <button className="secondary-btn btn">
+              <Link to="/login">Login</Link>
+            </button>
+          ) : (
+            <p>Hello, {user}</p>
+          )}
         </ul>
       </div>
     </nav>
