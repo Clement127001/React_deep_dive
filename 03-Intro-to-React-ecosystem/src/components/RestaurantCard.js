@@ -43,3 +43,17 @@ const RestaurantCard = ({ resData }) => {
 };
 
 export default RestaurantCard;
+
+//higher order function
+export const withHighlyRated = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="bg-slate-800 text-white p-2 absolute rounded-br-lg rounded-tl-lg font-sans">
+          Highly Rated
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};

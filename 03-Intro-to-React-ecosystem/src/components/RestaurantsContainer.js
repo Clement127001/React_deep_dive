@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RestaurantCard from "./RestaurantCard.js";
+import RestaurantCard, { withHighlyRated } from "./RestaurantCard.js";
 import { close } from "../asset/index.js";
 import { close, foodNotFound } from "../asset/index.js";
 import useOnlineStatus from "../utils/Hooks/useOnlineStatus.js";
@@ -8,6 +8,8 @@ const RestaurantsContainer = ({ data }) => {
   const [restaurantList, setRestaurantList] = useState(data);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState(data);
   const [filterText, setFilterText] = useState(null);
+
+  console.log(restaurantList);
 
   //filter and search functionalities
   const filterRestaurants = () => {
@@ -37,6 +39,8 @@ const RestaurantsContainer = ({ data }) => {
   };
 
   const onlineStatus = useOnlineStatus();
+
+  const RestaurantCardHighlyRated = withHighlyRated(RestaurantCard);
 
   return (
     <div className="restaurants-list">
@@ -74,12 +78,19 @@ const RestaurantsContainer = ({ data }) => {
         <h2 className="restaurants-title">Restaurants that you will like</h2>
         <div className="card-container">
           {filteredRestaurantList.length > 0 ? (
-            filteredRestaurantList.map((restaurant) => (
-              <RestaurantCard
-                key={restaurant.info.id}
-                resData={restaurant.info}
-              />
-            ))
+            filteredRestaurantList.map((restaurant) =>
+              restaurant.info.avgRating >= 4.6 ? (
+                <RestaurantCardHighlyRated
+                  key={restaurant.info.id}
+                  resData={restaurant.info}
+                />
+              ) : (
+                <RestaurantCard
+                  key={restaurant.info.id}
+                  resData={restaurant.info}
+                />
+              )
+            )
           ) : (
             <div className="not-found">
               <img src={foodNotFound} alt="food-not-found" />
