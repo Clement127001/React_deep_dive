@@ -7,7 +7,7 @@ const MenuItem = ({ dish }) => {
   const { rating, ratingCount } = ratings.aggregatedRating;
 
   return (
-    <div className="dish">
+    <div className="dish mt-4">
       <div className="dish-image">
         {imageId ? (
           <img src={IMG_URL + imageId} alt={name} />

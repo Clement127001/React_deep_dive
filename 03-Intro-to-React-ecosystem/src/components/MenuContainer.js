@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { star, location } from "../asset";
 import { IMG_URL } from "../utils/constants";
 import MenuItems from "./MenuItems";
 
 const MenuContainer = ({ menus }) => {
+  const [showItems, setShowItems] = useState(0);
+
+  const changeShowItems = (id) => {};
+
   let data = menus?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
   const resDetails = menus?.data?.cards[2]?.card?.card?.info;
@@ -66,7 +71,15 @@ const MenuContainer = ({ menus }) => {
           <MenuItems
             key={item?.card?.card.title + "-" + index}
             title={item?.card?.card.title}
+            idx={index}
             menus={item?.card?.card?.itemCards}
+            showItems={showItems}
+            changeShowItems={() => {
+              setShowItems((prev) => {
+                if (prev === index) return null;
+                else return index;
+              });
+            }}
           />
         ))}
       </div>
