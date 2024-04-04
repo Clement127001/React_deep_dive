@@ -8,7 +8,6 @@ const heading = React.createElement(
   { key: "child 1", id: "child-1-element" },
   "This is the heading using react element"
 );
-console.log(heading);
 
 //using the jsx to create the simple header
 

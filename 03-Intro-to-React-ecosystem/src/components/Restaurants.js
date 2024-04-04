@@ -18,14 +18,6 @@ export default Restaurants = () => {
 };
 
 const restaurantsLoader = async () => {
-  const userData = localStorage.getItem("user");
-  if (userData) {
-    const user = JSON.parse(userData);
-  } else {
-    window.location.href = "/login";
-    return;
-  }
-
   const response = await fetch(
     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
   );

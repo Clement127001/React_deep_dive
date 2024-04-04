@@ -1,20 +1,13 @@
 import { logo, online } from "../asset";
 import { Link, NavLink } from "react-router-dom";
 import useOnlineStatus from "../utils/Hooks/useOnlineStatus";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { LoginContext } from "../utils/store/loginContext";
 
 export default Header = () => {
   const isOnline = useOnlineStatus();
 
-  const [user, setUser] = useState("");
-
-  // useEffect(() => {
-  //   let userTimer;
-
-  //   fun();
-
-  //   return () => clearTimeout(userTimer);
-  // }, []);
+  const { userInfo, logoutUser } = useContext(LoginContext);
 
   return (
     <nav className="header">
@@ -27,6 +20,16 @@ export default Header = () => {
 
       <div className="nav-item">
         <ul>
+          {userInfo && userInfo.name && (
+            <li>
+              <p className="text-lg font-normal text-gray-600">
+                Hello,{" "}
+                <span className="text-xl text-black font-semibold">
+                  {userInfo.name}
+                </span>{" "}
+              </p>
+            </li>
+          )}
           <li className="online-status">
             status :
             {isOnline ? (
@@ -49,12 +52,14 @@ export default Header = () => {
           <li>
             <NavLink to="/cart">Cart</NavLink>
           </li>
-          {!user ? (
+          {!userInfo.name ? (
             <button className="secondary-btn btn">
               <Link to="/login">Login</Link>
             </button>
           ) : (
-            <p>Hello, {user}</p>
+            <button className="secondary-btn btn">
+              <Link onClick={logoutUser}>Logout</Link>
+            </button>
           )}
         </ul>
       </div>

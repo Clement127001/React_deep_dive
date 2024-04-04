@@ -44,7 +44,7 @@ const RestaurantCard = ({ resData }) => {
 
 export default RestaurantCard;
 
-//higher order function
+//higher order component input (Component) => output (enhanced component)
 export const withHighlyRated = (RestaurantCard) => {
   return (props) => {
     return (

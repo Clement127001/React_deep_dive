@@ -9,8 +9,6 @@ const RestaurantsContainer = ({ data }) => {
   const [filteredRestaurantList, setFilteredRestaurantList] = useState(data);
   const [filterText, setFilterText] = useState(null);
 
-  console.log(restaurantList);
-
   //filter and search functionalities
   const filterRestaurants = () => {
     if (filteredRestaurantList.length < restaurantList.length) {

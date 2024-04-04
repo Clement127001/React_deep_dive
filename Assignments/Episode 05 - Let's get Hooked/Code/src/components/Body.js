@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import RestaurantCard from './RestaurantCard';
-import resList from '../utils/mockData';
+import { useState } from "react";
+import RestaurantCard from "./RestaurantCard";
+import resList from "../utils/mockData";
 
 const Body = () => {
   // * React Hook -> A normal JavaScript function which is given to us by React (or) Normal JS utility functions
@@ -66,7 +66,6 @@ const Body = () => {
             );
 
             setListOfRestaurants(filteredList);
-            console.log(filteredList);
           }}
         >
           Top Rated Restaurants

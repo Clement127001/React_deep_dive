@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 // import Shimmer from './Shimmer';
-import ShimmerMenu from './ShimmerMenu';
-import { CDN_URL } from '../utils/constants';
-import { MENU_API } from '../utils/constants';
-import { FiClock } from 'react-icons/fi';
-import { AiOutlineStar } from 'react-icons/ai';
+import ShimmerMenu from "./ShimmerMenu";
+import { CDN_URL } from "../utils/constants";
+import { MENU_API } from "../utils/constants";
+import { FiClock } from "react-icons/fi";
+import { AiOutlineStar } from "react-icons/ai";
 
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
@@ -20,7 +20,6 @@ const RestaurantMenu = () => {
   const fetchMenu = async () => {
     const data = await fetch(MENU_API + resId);
     const json = await data.json();
-    console.log(json);
     setResInfo(json.data);
   };
 
@@ -39,8 +38,6 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-  console.log(itemCards);
-
   return (
     <div className="menu">
       <header className="menu-header">
@@ -50,16 +47,16 @@ const RestaurantMenu = () => {
         <div className="menu-header-right">
           <div className="top">
             <h1>{name}</h1>
-            <h3>{cuisines.join(', ')}</h3>
+            <h3>{cuisines.join(", ")}</h3>
           </div>
           <div className="bottom">
             <h4 className="avg-rating">
               <span
                 className="icons"
                 style={{
-                  position: 'relative',
-                  top: '2px',
-                  marginRight: '3px',
+                  position: "relative",
+                  top: "2px",
+                  marginRight: "3px",
                 }}
               >
                 <AiOutlineStar />
@@ -70,9 +67,9 @@ const RestaurantMenu = () => {
               <span
                 className="icons"
                 style={{
-                  position: 'relative',
-                  top: '2px',
-                  marginRight: '3px',
+                  position: "relative",
+                  top: "2px",
+                  marginRight: "3px",
                 }}
               >
                 <FiClock />

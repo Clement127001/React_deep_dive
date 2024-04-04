@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import RestaurantCard from './RestaurantCard';
-import Shimmer from './Shimmer';
+import { useEffect, useState } from "react";
+import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // * React Hook -> A normal JavaScript function which is given to us by React (or) Normal JS utility functions
@@ -11,10 +11,9 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
 
   // * Whenever a state variable updates or changes, react triggers a reconciliation cycle(re-renders the component)
-  console.log('Body rendered');
 
   useEffect(() => {
     fetchData();
@@ -22,12 +21,11 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING'
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
 
-    console.log(json);
     // * optional chaining
     // setListOfRestaurants(json.data.cards[2].data.data.cards);
     setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
@@ -62,7 +60,6 @@ const Body = () => {
             onClick={() => {
               // * Filter th restaurant cards and update the UI
               // * searchText
-              console.log(searchText);
 
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.data.name.toLowerCase().includes(searchText.toLowerCase())
@@ -83,7 +80,6 @@ const Body = () => {
             );
 
             setListOfRestaurants(filteredList);
-            console.log(filteredList);
           }}
         >
           Top Rated Restaurants

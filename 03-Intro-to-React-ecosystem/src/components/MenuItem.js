@@ -41,7 +41,7 @@ const MenuItem = ({ dish }) => {
           <p>&#8377;{price / 100 || defaultPrice / 100}</p>
         </div>
 
-        <button className="button-add btn">
+        <button className="button-add btn font-sans">
           Add to cart <span>+</span>
         </button>
       </div>

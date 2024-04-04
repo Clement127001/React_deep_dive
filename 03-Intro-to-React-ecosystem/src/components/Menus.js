@@ -16,6 +16,14 @@ const Menu = () => {
 export default Menu;
 
 const menuLoader = async (resId) => {
+  const userData = localStorage.getItem("user");
+  if (userData) {
+    const user = JSON.parse(userData);
+  } else {
+    window.location.href = "/login";
+    return;
+  }
+
   const response = await fetch(
     "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0826802&lng=80.2707184&restaurantId=" +
       resId
