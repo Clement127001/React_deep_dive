@@ -7,7 +7,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (userInfo.name) {
+    if (userInfo && userInfo.name) {
       return navigate("/");
     }
   }, [userInfo]);

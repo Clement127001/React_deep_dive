@@ -12,13 +12,11 @@ const LoginProvider = ({ children }) => {
   const [user, setUser] = useState({ name: "", email: "", password: "" });
 
   const loginUserHandler = (userData) => {
-    console.log("logging in  user");
     localStorage.setItem("user", JSON.stringify(userData));
     setUser(userData);
   };
 
   const logoutUserHanlder = () => {
-    console.log("logging out user");
     localStorage.removeItem("user");
     setUser(null);
   };
@@ -28,6 +26,7 @@ const LoginProvider = ({ children }) => {
     loginUser: loginUserHandler,
     logoutUser: logoutUserHanlder,
   };
+
   return (
     <LoginContext.Provider value={authCtx}>{children}</LoginContext.Provider>
   );

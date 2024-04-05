@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -6,11 +6,12 @@ import Main from "./src/Main";
 import Restaurants, {
   loader as restaurantsLoader,
 } from "./src/components/Restaurants";
-import About from "./src/components/About";
 import ErrorComponent from "./src/components/ErrorComponent";
 import Contact from "./src/components/Contact";
 import Menu, { loader as menuLoader } from "./src/components/Menus";
-import Login, { loginAction } from "./src/components/Login";
+import Login from "./src/components/Login";
+
+const About = lazy(() => import("./src/components/About"));
 
 //configuration for client side routing
 const route = createBrowserRouter([
@@ -26,7 +27,11 @@ const route = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<p>loading...</p>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",

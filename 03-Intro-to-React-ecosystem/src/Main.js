@@ -7,14 +7,13 @@ import Footer from "./components/Footer";
 
 function Main() {
   return (
-    <div className="restaurant-container">
-      <LoginProvider>
+    <LoginProvider>
+      <div className="restaurant-container">
         <Header />
         <Outlet />
-      </LoginProvider>
-
-      {/* <Footer /> */}
-    </div>
+        {/* <Footer /> */}
+      </div>
+    </LoginProvider>
   );
 }
 

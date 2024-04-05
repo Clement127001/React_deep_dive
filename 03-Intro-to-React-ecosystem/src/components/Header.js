@@ -52,13 +52,13 @@ export default Header = () => {
           <li>
             <NavLink to="/cart">Cart</NavLink>
           </li>
-          {!userInfo.name ? (
+          {userInfo && userInfo.name ? (
             <button className="secondary-btn btn">
-              <Link to="/login">Login</Link>
+              <Link onClick={logoutUser}>Logout</Link>
             </button>
           ) : (
             <button className="secondary-btn btn">
-              <Link onClick={logoutUser}>Logout</Link>
+              <Link to="/login">Login</Link>
             </button>
           )}
         </ul>
