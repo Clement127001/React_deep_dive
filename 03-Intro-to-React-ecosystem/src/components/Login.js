@@ -1,10 +1,14 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { LoginContext } from "../utils/store/loginContext";
+import { useSelector, useDispatch } from "react-redux";
+import { loginUser } from "../utils/store/userSlice";
 
 const Login = () => {
-  const { userInfo, loginUser } = useContext(LoginContext);
   const navigate = useNavigate();
+  const userInfo = useSelector((store) => store.user.userInfo);
+  const dispatch = useDispatch();
+
+  console.log(userInfo);
 
   useEffect(() => {
     if (userInfo && userInfo.name) {
@@ -20,7 +24,7 @@ const Login = () => {
     const password = formdata.password.value;
     const userData = { email, name, password };
 
-    loginUser(userData);
+    dispatch(loginUser(userData));
   };
 
   return (

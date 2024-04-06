@@ -137,10 +137,6 @@ table {
     border-spacing: 0;
 }
 
-.restaurant-container {
-    padding: 1rem;
-    position: relative;
-}
 
 .btn {
     background-color: #c14d2a;
@@ -182,10 +178,8 @@ table {
     justify-content: space-around;
     align-items: center;
     padding: 0.5rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 1px 3px 30px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 3px 30px -17px rgba(0, 0, 0, 0.75);
     background-color: white;
-    z-index: 2;
 }
 
 .logo {

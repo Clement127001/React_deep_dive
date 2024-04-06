@@ -1,13 +1,15 @@
-import { logo, online } from "../asset";
+import { logo } from "../asset";
 import { Link, NavLink } from "react-router-dom";
-import useOnlineStatus from "../utils/Hooks/useOnlineStatus";
-import { useContext } from "react";
-import { LoginContext } from "../utils/store/loginContext";
+import { useSelector, useDispatch } from "react-redux";
+import { logoutUser } from "../utils/store/userSlice";
 
 export default Header = () => {
-  const isOnline = useOnlineStatus();
+  const userInfo = useSelector((store) => store.user.userInfo);
+  const dispatch = useDispatch();
 
-  const { userInfo, logoutUser } = useContext(LoginContext);
+  const logoutUserHandler = () => {
+    dispatch(logoutUser("user"));
+  };
 
   return (
     <nav className="header">
@@ -30,14 +32,7 @@ export default Header = () => {
               </p>
             </li>
           )}
-          <li className="online-status">
-            status :
-            {isOnline ? (
-              <img src={online} alt="online" width={36} height={36} />
-            ) : (
-              "🛬"
-            )}
-          </li>
+
           <li>
             <NavLink
               to="/"
@@ -54,7 +49,7 @@ export default Header = () => {
           </li>
           {userInfo && userInfo.name ? (
             <button className="secondary-btn btn">
-              <Link onClick={logoutUser}>Logout</Link>
+              <Link onClick={logoutUserHandler}>Logout</Link>
             </button>
           ) : (
             <button className="secondary-btn btn">

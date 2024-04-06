@@ -1,19 +1,20 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { LoginProvider } from "./utils/store/loginContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/store/appStore";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function Main() {
   return (
-    <LoginProvider>
+    <Provider store={appStore}>
       <div className="restaurant-container">
         <Header />
         <Outlet />
         {/* <Footer /> */}
       </div>
-    </LoginProvider>
+    </Provider>
   );
 }
 
