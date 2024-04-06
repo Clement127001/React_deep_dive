@@ -5,6 +5,10 @@ import { logoutUser } from "../utils/store/userSlice";
 
 export default Header = () => {
   const userInfo = useSelector((store) => store.user.userInfo);
+  const cartInfo = useSelector((store) => store.cart);
+
+  const cartLength = Object.keys(cartInfo.cartItems).length;
+  console.log(cartInfo);
   const dispatch = useDispatch();
 
   const logoutUserHandler = () => {
@@ -45,7 +49,12 @@ export default Header = () => {
             <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink to="/cart">Cart</NavLink>
+            <NavLink to="/cart">
+              Cart
+              <span className=" py-1 px-4 bg-black text-white text-sans rounded-lg ml-2 font-semibold">
+                {cartLength}
+              </span>
+            </NavLink>
           </li>
           {userInfo && userInfo.name ? (
             <button className="secondary-btn btn">

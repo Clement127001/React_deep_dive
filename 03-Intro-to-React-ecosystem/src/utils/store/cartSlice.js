@@ -1,26 +1,66 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const defaulValue = {
+  cartItems: {},
+  checkoutAmount: 0,
+};
 const cartSlice = createSlice({
   name: "cart",
-  initialState: {
-    cartItems: [],
-    checkoutAmout: 0,
-  },
+  initialState: defaulValue,
   reducers: {
     addCartItem: (state, action) => {
-      state.concat(action.payload);
+      const { id, price, defaultPrice } = action.payload;
+
+      if (defaultPrice) state.checkoutAmount += defaultPrice / 100;
+      else if (price) state.checkoutAmount += price / 100;
+
+      if (state.cartItems[id]) {
+        state.cartItems[id].quantity++;
+      } else state.cartItems[id] = action.payload;
+    },
+    reduceCartItem: (state, action) => {
+      const id = action.payload;
+      let { cartItems, checkoutAmount: amount } = state;
+
+      if (cartItems && cartItems[id]) {
+        const { price, defaultPrice } = cartItems[id];
+
+        console.log(price);
+
+        if (price) amount -= price / 100;
+        else if (defaultPrice) amount -= defaultPrice / 100;
+
+        if (cartItems[id] && cartItems[id].quantity == 1) {
+          delete cartItems[id];
+        } else if (cartItems[id] && cartItems[id].quantity > 1)
+          cartItems[id].quantity--;
+
+        state.checkoutAmount = amount;
+      }
     },
     removeCartItem: (state, action) => {
-      const newItems = state.cartItems.filter(item.id != action.payload.id);
-      state.cartItems = newItems;
+      const id = action.payload;
+      let { checkoutAmount: amount, cartItems } = state;
+
+      if (cartItems && cartItems[id]) {
+        const { price, defaultPrice, quantity } = cartItems[id];
+
+        if (price) amount -= quantity * (price / 100);
+        else if (defaultPrice) amount -= quantity * (defaultPrice / 100);
+
+        state.checkoutAmount = amount;
+
+        delete cartItems[id];
+      }
     },
     clearCartItems: (state) => {
-      state.cartItems.length = 0;
+      state.cartItems = {};
+      state.checkoutAmount = 0;
     },
   },
 });
 
-export const { addCartItem, removeCartItem, clearCartItems } =
+export const { addCartItem, reduceCartItem, removeCartItem, clearCartItems } =
   cartSlice.actions;
 
 export default cartSlice.reducer;

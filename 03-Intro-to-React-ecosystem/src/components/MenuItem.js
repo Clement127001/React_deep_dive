@@ -1,10 +1,36 @@
+import { useDispatch } from "react-redux";
+import { addCartItem } from "../utils/store/cartSlice";
 import { IMG_URL } from "../utils/constants";
 import { star } from "../asset";
 const MenuItem = ({ dish }) => {
-  const { imageId, ratings, defaultPrice, price, name, isVeg, description } =
-    dish;
+  const dispatch = useDispatch();
+
+  // console.log(dish);
+  const {
+    imageId,
+    ratings,
+    defaultPrice,
+    price,
+    name,
+    isVeg,
+    description,
+    id,
+  } = dish;
 
   const { rating, ratingCount } = ratings.aggregatedRating;
+
+  const addCartHandler = () => {
+    const data = {
+      name,
+      price,
+      defaultPrice,
+      price,
+      id,
+      quantity: 1,
+    };
+
+    dispatch(addCartItem(data));
+  };
 
   return (
     <div className="dish mt-4">
@@ -41,7 +67,7 @@ const MenuItem = ({ dish }) => {
           <p>&#8377;{price / 100 || defaultPrice / 100}</p>
         </div>
 
-        <button className="button-add btn font-sans">
+        <button className="button-add btn font-sans" onClick={addCartHandler}>
           Add to cart <span>+</span>
         </button>
       </div>
