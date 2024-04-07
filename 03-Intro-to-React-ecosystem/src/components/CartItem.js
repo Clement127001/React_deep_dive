@@ -24,13 +24,17 @@ const CartItem = ({ data }) => {
   };
 
   return (
-    <div className="mt-5 border-t-2 border-solid border-gray-100 pt-4 flex  items-center gap-10">
-      <div>
-        <img
-          className="w-[160px] h-[120px] object-cover rounded-2xl "
-          src={IMG_URL + imageId}
-          alt={name}
-        />
+    <div className="mt-5 border-t-2 border-solid border-gray-100 pt-4 flex  items-center gap-10 mx-5">
+      <div className="flex justify-center items-center w-[200px]">
+        {imageId ? (
+          <img
+            className="w-[200px] h-[140px] object-cover rounded-2xl "
+            src={IMG_URL + imageId}
+            alt={name}
+          />
+        ) : (
+          <p>No Image available</p>
+        )}
       </div>
 
       <div className="flex justify-between w-full">

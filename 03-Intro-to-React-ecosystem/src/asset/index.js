@@ -14,8 +14,10 @@ import remove from "./remove.png";
 import noItem from "./no-items.png";
 import cartIcon from "./cart.png";
 import logoAlt from "./logoFinal.png";
+import aboutImg from "./about-img.png";
 
 export {
+  aboutImg,
   star,
   close,
   foodNotFound,

@@ -8,11 +8,11 @@ const userSlice = createSlice({
   reducers: {
     loginUser: (state, action) => {
       state.userInfo = action.payload;
-      localStorage.setItem("user", JSON.stringify(state.userInfo));
+      // localStorage.setItem("user", JSON.stringify(state.userInfo));
     },
     logoutUser: (state, action) => {
       state.userInfo = {};
-      localStorage.removeItem(action.payload);
+      // localStorage.removeItem(action.payload);
     },
   },
 });

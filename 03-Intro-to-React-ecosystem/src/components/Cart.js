@@ -1,11 +1,19 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { clearCartItems } from "../utils/store/cartSlice";
 import CartItem from "./CartItem";
-import { noItem } from "../asset";
+import { noItem, del } from "../asset";
+import { useEffect } from "react";
 
 const Cart = () => {
   const { cartItems, checkoutAmount } = useSelector((store) => store.cart);
+  const { userInfo } = useSelector((store) => store.user);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!userInfo.name) return navigate("/login");
+  }, []);
+
   const cartLength = Object.keys(cartItems).length;
 
   const dispatch = useDispatch();
@@ -44,8 +52,16 @@ const Cart = () => {
         >
           Add Items
         </Link>
+
+        <button
+          className="border-2 border-solid border-red-500 py-2 px-4 rounded-md flex gap-2 items-center"
+          onClick={clearCartHandler}
+        >
+          <img src={del} width={16} />
+          <span className="text-red-500 font-sans"> Clear cart</span>
+        </button>
       </div>
-      <div className="my-6">{items}</div>
+      <div className="my-6 max-h-[600px] overflow-scroll">{items}</div>
 
       <button className="w-full shadow-green-200 shadow-lg  bg-green-600 py-4 rounded-3xl font-sans text-white font-semibold mb-4 text-lg">
         Place Order - &#8377; {checkoutAmount.toFixed(2)}
@@ -54,7 +70,7 @@ const Cart = () => {
   );
 
   return (
-    <div className=" mt-10 flex w-full min-h-screen justify-center items-center">
+    <div className=" my-10 flex w-full min-h-screen justify-center items-center">
       {cartLength == 0 ? noItemElement : cartElement}
     </div>
   );
