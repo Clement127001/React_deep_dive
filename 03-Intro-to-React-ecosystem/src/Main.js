@@ -12,7 +12,7 @@ function Main() {
       <div className="restaurant-container">
         <Header />
         <Outlet />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Provider>
   );

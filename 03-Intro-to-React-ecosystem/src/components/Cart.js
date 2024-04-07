@@ -54,7 +54,7 @@ const Cart = () => {
   );
 
   return (
-    <div className=" mt-10 flex w-full h-fit justify-center items-center">
+    <div className=" mt-10 flex w-full min-h-screen justify-center items-center">
       {cartLength == 0 ? noItemElement : cartElement}
     </div>
   );

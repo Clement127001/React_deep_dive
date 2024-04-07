@@ -52,7 +52,7 @@ export default Header = () => {
               <img src={cartIcon} alt="you cart" width={40} />
               <span
                 className=" absolute top-[-15px] right-[-20px] 
-              px-2 py-[2px] bg-black text-white text-sans rounded-lg ml-2 font-semibold text-sm"
+              px-2 py-[2px] bg-[#c14d2a] text-white text-sans rounded-lg ml-2 font-semibold text-sm"
               >
                 {cartLength}
               </span>
@@ -63,9 +63,12 @@ export default Header = () => {
               <Link onClick={logoutUserHandler}>Logout</Link>
             </button>
           ) : (
-            <button className="secondary-btn btn">
-              <Link to="/login">Login</Link>
-            </button>
+            <Link
+              className="border-2 border-solid border-[#c14d2a] bg-white text-[#c14d2a] font-sans py-2 px-4 rounded-lg"
+              to="/login"
+            >
+              Login
+            </Link>
           )}
         </ul>
       </div>

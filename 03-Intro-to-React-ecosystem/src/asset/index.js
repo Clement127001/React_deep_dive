@@ -13,6 +13,7 @@ import del from "./delete.png";
 import remove from "./remove.png";
 import noItem from "./no-items.png";
 import cartIcon from "./cart.png";
+import logoAlt from "./logoFinal.png";
 
 export {
   star,
@@ -30,4 +31,5 @@ export {
   del,
   noItem,
   cartIcon,
+  logoAlt,
 };

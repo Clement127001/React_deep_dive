@@ -34,16 +34,9 @@ const MenuItem = ({ dish }) => {
   };
 
   return (
-    <div className="dish mt-4">
-      <div className="dish-image">
-        {imageId ? (
-          <img src={IMG_URL + imageId} alt={name} />
-        ) : (
-          <p>No image availabe</p>
-        )}
-      </div>
-      <div className="dish-details">
-        <h3>{name}</h3>
+    <div className="dish mt-4 ">
+      <div className="dish-details ml-2">
+        <h3 className="font-sans text-lg">{name}</h3>
         {description && <p className="dish-description">{description}</p>}
 
         <div className="dish-additional">
@@ -67,8 +60,24 @@ const MenuItem = ({ dish }) => {
           <span></span>
           <p>&#8377;{price / 100 || defaultPrice / 100}</p>
         </div>
+      </div>
 
-        <button className="button-add btn font-sans" onClick={addCartHandler}>
+      <div className="relative">
+        <div className="dish-image h-[180px]">
+          {imageId ? (
+            <img
+              src={IMG_URL + imageId}
+              alt={name}
+              className="w-[200px] h-full"
+            />
+          ) : (
+            <p>No image availabe</p>
+          )}
+        </div>
+        <button
+          className="font-sans absolute right-[35px] bottom-[-10px] bg-black text-white py-4 px-4 rounded-lg shadow-xl"
+          onClick={addCartHandler}
+        >
           Add to cart <span>+</span>
         </button>
       </div>
