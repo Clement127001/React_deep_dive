@@ -24,9 +24,6 @@ const cartSlice = createSlice({
 
       if (cartItems && cartItems[id]) {
         const { price, defaultPrice } = cartItems[id];
-
-        console.log(price);
-
         if (price) amount -= price / 100;
         else if (defaultPrice) amount -= defaultPrice / 100;
 
@@ -35,6 +32,20 @@ const cartSlice = createSlice({
         } else if (cartItems[id] && cartItems[id].quantity > 1)
           cartItems[id].quantity--;
 
+        state.checkoutAmount = amount;
+      }
+    },
+    increaseCartItem: (state, action) => {
+      const id = action.payload;
+      let { checkoutAmount: amount, cartItems } = state;
+
+      if (cartItems && cartItems[id]) {
+        const { defaultPrice, price } = cartItems[id];
+
+        if (price) amount += price / 100;
+        else if (defaultPrice) amount += defaultPrice / 100;
+
+        state.cartItems[id].quantity++;
         state.checkoutAmount = amount;
       }
     },
@@ -60,7 +71,12 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addCartItem, reduceCartItem, removeCartItem, clearCartItems } =
-  cartSlice.actions;
+export const {
+  addCartItem,
+  reduceCartItem,
+  removeCartItem,
+  clearCartItems,
+  increaseCartItem,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

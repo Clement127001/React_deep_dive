@@ -27,6 +27,7 @@ const MenuItem = ({ dish }) => {
       price,
       id,
       quantity: 1,
+      imageId,
     };
 
     dispatch(addCartItem(data));

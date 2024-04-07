@@ -1,14 +1,13 @@
-import { logo } from "../asset";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutUser } from "../utils/store/userSlice";
+import { logo, cartIcon } from "../asset";
 
 export default Header = () => {
   const userInfo = useSelector((store) => store.user.userInfo);
   const cartInfo = useSelector((store) => store.cart);
 
   const cartLength = Object.keys(cartInfo.cartItems).length;
-  console.log(cartInfo);
   const dispatch = useDispatch();
 
   const logoutUserHandler = () => {
@@ -49,12 +48,15 @@ export default Header = () => {
             <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink to="/cart">
-              Cart
-              <span className=" py-1 px-4 bg-black text-white text-sans rounded-lg ml-2 font-semibold">
+            <Link to="/cart" className="flex items-center relative">
+              <img src={cartIcon} alt="you cart" width={40} />
+              <span
+                className=" absolute top-[-15px] right-[-20px] 
+              px-2 py-[2px] bg-black text-white text-sans rounded-lg ml-2 font-semibold text-sm"
+              >
                 {cartLength}
               </span>
-            </NavLink>
+            </Link>
           </li>
           {userInfo && userInfo.name ? (
             <button className="secondary-btn btn">

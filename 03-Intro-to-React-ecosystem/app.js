@@ -12,6 +12,7 @@ import Menu, { loader as menuLoader } from "./src/components/Menus";
 import Login from "./src/components/Login";
 
 const About = lazy(() => import("./src/components/About"));
+const Cart = lazy(() => import("./src/components/Cart"));
 
 //configuration for client side routing
 const route = createBrowserRouter([
@@ -40,6 +41,14 @@ const route = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/cart",
+        element: (
+          <Suspense fallback={<p>loading cart</p>}>
+            <Cart />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurants/:resId",

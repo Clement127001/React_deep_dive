@@ -8,6 +8,11 @@ import logo from "./logo.png";
 import arrowUp from "./arrow-up.png";
 import arrowDown from "./arrow-down.png";
 import loginBg from "./login.webp";
+import add from "./add.png";
+import del from "./delete.png";
+import remove from "./remove.png";
+import noItem from "./no-items.png";
+import cartIcon from "./cart.png";
 
 export {
   star,
@@ -20,4 +25,9 @@ export {
   loginBg,
   arrowDown,
   arrowUp,
+  add,
+  remove,
+  del,
+  noItem,
+  cartIcon,
 };
