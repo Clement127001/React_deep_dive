@@ -6,16 +6,22 @@ import {
 } from "../utils/store/cartSlice";
 import { IMG_URL } from "../utils/constants";
 import { add, remove, del } from "../asset";
+import { useState } from "react";
 
 const CartItem = ({ data }) => {
   const { name, defaultPrice, price, quantity, imageId, id } = data;
+  const [incr, setIncr] = useState(0);
+  const [decr, setDecr] = useState(0);
+
   const dispatch = useDispatch();
 
   const increaseCartHandler = () => {
+    setIncr(1);
     dispatch(increaseCartItem(id));
   };
 
   const reduceCartHandler = () => {
+    setDecr(1);
     dispatch(reduceCartItem(id));
   };
 
@@ -47,11 +53,29 @@ const CartItem = ({ data }) => {
 
         <div className="flex gap-4 items-center">
           <button onClick={reduceCartHandler}>
-            <img src={remove} alt="remove from cart" width={36} />
+            <img
+              src={remove}
+              alt="remove from cart"
+              width={36}
+              className="btn-inc"
+              onAnimationEnd={() => setDecr(0)}
+              decr={decr}
+            />
           </button>
           <p className="font-sans font-semibold">{quantity}x</p>
           <button onClick={increaseCartHandler}>
-            <img src={add} alt="add more" width={40} />
+            <img
+              src={add}
+              alt="add more"
+              width={40}
+              className="btn-inc"
+              onAnimationEnd={() => setIncr(0)}
+              incr={incr}
+            />
+          </button>
+
+          <button onClick={removeCartHandler}>
+            <img src={del} alt="remove from cart" width={24} />
           </button>
         </div>
       </div>

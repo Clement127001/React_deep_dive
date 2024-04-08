@@ -2,8 +2,10 @@ import { useDispatch } from "react-redux";
 import { addCartItem } from "../utils/store/cartSlice";
 import { IMG_URL } from "../utils/constants";
 import { star } from "../asset";
+import { useState } from "react";
 const MenuItem = ({ dish }) => {
   const dispatch = useDispatch();
+  const [incr, setInc] = useState(0);
 
   // console.log(dish);
   const {
@@ -29,7 +31,7 @@ const MenuItem = ({ dish }) => {
       quantity: 1,
       imageId,
     };
-
+    setInc(1);
     dispatch(addCartItem(data));
   };
 
@@ -75,8 +77,10 @@ const MenuItem = ({ dish }) => {
           )}
         </div>
         <button
-          className="font-sans absolute right-[35px] bottom-[-10px] bg-black text-white py-4 px-4 rounded-lg shadow-xl"
+          className="font-sans absolute right-[35px] bottom-[-10px] bg-black text-white py-4 px-4 rounded-lg shadow-xl btn-inc"
           onClick={addCartHandler}
+          incr={incr}
+          onAnimationEnd={() => setInc(0)}
         >
           Add to cart <span>+</span>
         </button>
