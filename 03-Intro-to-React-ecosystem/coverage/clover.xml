@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1712599166633" clover="3.2.0">
-  <project timestamp="1712599166633" name="All files">
-    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="3" coveredelements="3" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1"/>
-    <file name="sum.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/Dummy/sum.js">
+<coverage generated="1712629956472" clover="3.2.0">
+  <project timestamp="1712629956472" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="2" files="2" classes="2"/>
+    <package name="Dummy">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-    </file>
+      <file name="sum.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/Dummy/sum.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="About.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/About.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

@@ -3,6 +3,7 @@ import { addCartItem } from "../utils/store/cartSlice";
 import { IMG_URL } from "../utils/constants";
 import { star } from "../asset";
 import { useState } from "react";
+
 const MenuItem = ({ dish }) => {
   const dispatch = useDispatch();
   const [incr, setInc] = useState(0);

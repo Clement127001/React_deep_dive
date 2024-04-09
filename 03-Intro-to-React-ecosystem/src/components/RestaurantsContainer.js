@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import RestaurantCard, { withHighlyRated } from "./RestaurantCard.js";
-import { close } from "../asset/index.js";
+
 import { close, foodNotFound } from "../asset/index.js";
 import useOnlineStatus from "../utils/Hooks/useOnlineStatus.js";
 
