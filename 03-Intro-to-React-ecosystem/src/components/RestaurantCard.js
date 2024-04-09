@@ -4,6 +4,7 @@ import { IMG_URL } from "../utils/constants";
 import { star } from "../asset";
 
 const RestaurantCard = ({ resData }) => {
+  console.log(resData);
   const {
     id,
     cloudinaryImageId,

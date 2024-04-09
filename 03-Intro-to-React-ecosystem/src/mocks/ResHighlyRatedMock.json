@@ -1,0 +1,55 @@
+{
+    "id": "383374",
+    "name": "Kwality Walls Frozen Dessert and Ice Cream Shop",
+    "cloudinaryImageId": "rp0skf7vyz27uxgwdblf",
+    "locality": "Venkatesa Bathan Street",
+    "areaName": "Purasawalkam",
+    "costForTwo": "₹300 for two",
+    "cuisines": [
+        "Desserts",
+        "Ice Cream",
+        "Ice Cream Cakes"
+    ],
+    "avgRating": 4.6,
+    "veg": true,
+    "parentId": "582",
+    "avgRatingString": "4.6",
+    "totalRatingsString": "1K+",
+    "sla": {
+        "deliveryTime": 22,
+        "lastMileTravel": 2.3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "2.3 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2024-04-09 23:45:00",
+        "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+        "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+        }
+    },
+    "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "subHeader": "UPTO ₹100"
+    },
+    "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+        }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {}
+}
