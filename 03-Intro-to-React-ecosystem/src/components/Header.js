@@ -49,7 +49,7 @@ export default Header = () => {
           </li>
           <li>
             <Link to="/cart" className="flex items-center relative">
-              <img src={cartIcon} alt="you cart" width={40} />
+              <img src={cartIcon} alt="your cart" width={40} />
               <span
                 className=" absolute top-[-15px] right-[-20px] 
               px-2 py-[2px] bg-[#c14d2a] text-white text-sans rounded-lg ml-2 font-semibold text-sm"

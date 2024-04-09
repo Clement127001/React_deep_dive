@@ -5,7 +5,6 @@ import About from "../components/About";
 describe("About Page test cases", () => {
   it("should render heading to the screen", () => {
     render(<About />);
-
     const heading = screen.getByRole("heading");
     expect(heading).toBeInTheDocument();
   });
@@ -14,5 +13,11 @@ describe("About Page test cases", () => {
     render(<About />);
     const button = screen.getByText("Contact Me");
     expect(button).toBeInTheDocument();
+  });
+
+  it("should the image", () => {
+    render(<About />);
+    const image = screen.getByAltText("developer");
+    expect(image).toBeInTheDocument();
   });
 });
