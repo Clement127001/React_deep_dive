@@ -276,10 +276,9 @@ a.active {
     padding: 3rem 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
-    column-gap: 1.5rem;
+    /* justify-content: center; */
+    column-gap: 2rem;
     row-gap: 2rem;
-    margin-left: 1.5rem;
 }
 
 
@@ -387,6 +386,7 @@ a.active {
     column-gap: 2rem;
     flex-wrap: wrap;
     padding-top: 9rem;
+    padding-left: 4rem;
 }
 
 .shimmer-card {

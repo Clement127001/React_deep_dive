@@ -4,16 +4,11 @@ import { IMG_URL } from "../utils/constants";
 import { star } from "../asset";
 
 const RestaurantCard = ({ resData }) => {
-  console.log(resData);
-  const {
-    id,
-    cloudinaryImageId,
-    cuisines,
-    name,
-    costForTwo,
-    avgRating,
-    deliveryTime,
-  } = resData;
+  // console.log(resData);
+  const { id, cloudinaryImageId, cuisines, name, costForTwo, avgRating, sla } =
+    resData;
+
+  const { deliveryTime } = sla;
   return (
     <NavLink to={"/restaurants/" + id}>
       <div className="restaurant-card">

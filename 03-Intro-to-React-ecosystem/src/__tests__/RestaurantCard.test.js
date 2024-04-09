@@ -18,6 +18,7 @@ describe("test the restaurants card component", () => {
     expect(name).toBeInTheDocument();
   });
 
+  //rendering the higher order component is as same as rendering within the react component
   it("should render the higher order component", () => {
     const ResWithLabel = withHighlyRated(RestaurantCard);
 
