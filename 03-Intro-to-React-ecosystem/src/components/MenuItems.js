@@ -12,7 +12,10 @@ const MenuItems = ({ menus, title, showItems, changeShowItems, idx }) => {
           className="flex justify-between cursor-pointer items-center"
           onClick={handleToggle}
         >
-          <h2 className="font-sans text-xl font-semibold">
+          <h2
+            className="font-sans text-xl font-semibold"
+            data-testid="menuHeading"
+          >
             {title + " ("}
             <span>
               {menus.length}

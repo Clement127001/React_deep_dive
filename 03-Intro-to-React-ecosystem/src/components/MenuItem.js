@@ -82,6 +82,7 @@ const MenuItem = ({ dish }) => {
           onClick={addCartHandler}
           incr={incr}
           onAnimationEnd={() => setInc(0)}
+          data-testid="cartBtn"
         >
           Add to cart <span>+</span>
         </button>

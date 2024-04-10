@@ -53,6 +53,7 @@ export default Header = () => {
               <span
                 className=" absolute top-[-15px] right-[-20px] 
               px-2 py-[2px] bg-[#c14d2a] text-white text-sans rounded-lg ml-2 font-semibold text-sm"
+                data-testid="cartCount"
               >
                 {cartLength}
               </span>

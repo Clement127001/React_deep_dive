@@ -2,6 +2,11 @@
   "name": "03-intro-to-react-ecosystem",
   "version": "1.0.0",
   "description": "this document will contain all the things that are required to build a strong foundation for the strong knowledge for the react based ecosystem",
+  "jest": {
+    "testPathIgnorePatterns" : [
+      "src/asset/*" 
+    ]
+  },
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
@@ -40,4 +45,5 @@
     "process": "^0.11.10",
     "tailwindcss": "^3.4.3"
   }
+  
 }

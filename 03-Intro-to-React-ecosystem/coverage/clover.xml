@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1712744427161" clover="3.2.0">
-  <project timestamp="1712744427161" name="All files">
-    <metrics statements="106" coveredstatements="54" conditionals="71" coveredconditionals="20" methods="35" coveredmethods="18" elements="212" coveredelements="92" complexity="0" loc="106" ncloc="106" packages="6" files="11" classes="11"/>
+<coverage generated="1712767418268" clover="3.2.0">
+  <project timestamp="1712767418268" name="All files">
+    <metrics statements="166" coveredstatements="110" conditionals="105" coveredconditionals="51" methods="57" coveredmethods="33" elements="328" coveredelements="194" complexity="0" loc="166" ncloc="166" packages="6" files="16" classes="16"/>
     <package name="Dummy">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="sum.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/Dummy/sum.js">
@@ -17,22 +17,97 @@
       </file>
     </package>
     <package name="components">
-      <metrics statements="54" coveredstatements="39" conditionals="33" coveredconditionals="20" methods="23" coveredmethods="15"/>
+      <metrics statements="114" coveredstatements="90" conditionals="67" coveredconditionals="48" methods="45" coveredmethods="29"/>
       <file name="About.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/About.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
       </file>
+      <file name="Cart.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/Cart.js">
+        <metrics statements="16" coveredstatements="15" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="4"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="17" type="stmt"/>
+        <line num="10" count="17" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="14" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+        <line num="40" count="10" type="stmt"/>
+        <line num="41" count="11" type="stmt"/>
+        <line num="45" count="10" type="stmt"/>
+        <line num="72" count="10" type="stmt"/>
+      </file>
+      <file name="CartItem.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/CartItem.js">
+        <metrics statements="16" coveredstatements="9" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="11" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="11" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+      </file>
       <file name="Header.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/Header.js">
-        <metrics statements="8" coveredstatements="7" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="4"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <metrics statements="8" coveredstatements="7" conditionals="9" coveredconditionals="7" methods="5" coveredmethods="4"/>
+        <line num="7" count="18" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="42" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="42" count="12" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="MenuContainer.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/MenuContainer.js">
+        <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="3" methods="5" coveredmethods="4"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="71" count="110" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="79" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="80" count="2" type="stmt"/>
+      </file>
+      <file name="MenuItem.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/MenuItem.js">
+        <metrics statements="11" coveredstatements="10" conditionals="14" coveredconditionals="12" methods="3" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="45" type="stmt"/>
+        <line num="9" count="45" type="stmt"/>
+        <line num="21" count="45" type="stmt"/>
+        <line num="23" count="45" type="stmt"/>
+        <line num="25" count="45" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="39" count="45" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+      </file>
+      <file name="MenuItems.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/MenuItems.js">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="110" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="110" type="stmt"/>
+        <line num="37" count="41" type="stmt"/>
       </file>
       <file name="RestaurantCard.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/components/RestaurantCard.js">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
@@ -89,7 +164,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="constants.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/utils/constants.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
       </file>
     </package>
     <package name="utils.Hooks">
@@ -105,21 +180,21 @@
       </file>
     </package>
     <package name="utils.store">
-      <metrics statements="43" coveredstatements="6" conditionals="38" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="43" coveredstatements="11" conditionals="38" coveredconditionals="3" methods="7" coveredmethods="1"/>
       <file name="appStore.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/utils/store/appStore.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
       </file>
       <file name="cartSlice.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/utils/store/cartSlice.js">
-        <metrics statements="38" coveredstatements="3" conditionals="38" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="38" coveredstatements="8" conditionals="38" coveredconditionals="3" methods="5" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="14" count="4" type="cond" truecount="1" falsecount="1"/>
         <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="25" count="0" type="cond" truecount="0" falsecount="4"/>
@@ -149,14 +224,14 @@
         <line num="64" count="0" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
       </file>
       <file name="userSlice.js" path="/Users/clement/webDevelopmentLearning/oneLastDaceBeforeDance/AFullBlowReactRevision/React_deep_dive/03-Intro-to-React-ecosystem/src/utils/store/userSlice.js">
         <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
       </file>
     </package>
   </project>

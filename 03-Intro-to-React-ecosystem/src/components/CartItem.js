@@ -30,7 +30,10 @@ const CartItem = ({ data }) => {
   };
 
   return (
-    <div className="mt-5 border-t-2 border-solid border-gray-100 pt-4 flex  items-center gap-10 mx-5">
+    <div
+      className="mt-5 border-t-2 border-solid border-gray-100 pt-4 flex  items-center gap-10 mx-5"
+      data-testid="cartItem"
+    >
       <div className="flex justify-center items-center w-[200px]">
         {imageId ? (
           <img
