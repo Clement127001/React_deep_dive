@@ -11,7 +11,7 @@ const RestaurantCard = ({ resData }) => {
   const { deliveryTime } = sla;
   return (
     <NavLink to={"/restaurants/" + id}>
-      <div className="restaurant-card">
+      <div className="restaurant-card" data-testid="resCard">
         <img src={IMG_URL + cloudinaryImageId} alt={name} />
         <div className="restaurant-info">
           <h3>{name}</h3>

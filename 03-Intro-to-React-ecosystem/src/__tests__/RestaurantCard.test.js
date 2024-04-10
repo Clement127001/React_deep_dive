@@ -29,7 +29,6 @@ describe("test the restaurants card component", () => {
     );
 
     const highlyRatedLabel = screen.getByText("Highly Rated");
-    screen.debug();
 
     expect(highlyRatedLabel).toBeInTheDocument();
   });

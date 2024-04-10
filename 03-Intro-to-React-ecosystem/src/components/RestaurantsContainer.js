@@ -74,6 +74,7 @@ const RestaurantsContainer = ({ data }) => {
       <section className="filters">
         <div className="search-container">
           <input
+            data-testid="searchInput"
             type="text"
             placeholder="Search your favorite spot"
             value={filterText ? filterText : ""}
@@ -95,6 +96,7 @@ const RestaurantsContainer = ({ data }) => {
         <button
           className=" font-sans px-6 py-3 rounded-full text-gray-400 border-2 border-solid border-gray-400 "
           onClick={filterRestaurants}
+          data-testid="topRated"
         >
           {filteredRestaurantList.length === restaurantList.length
             ? "Top Rated"
