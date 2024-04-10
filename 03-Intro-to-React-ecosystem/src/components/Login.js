@@ -8,8 +8,6 @@ const Login = () => {
   const userInfo = useSelector((store) => store.user.userInfo);
   const dispatch = useDispatch();
 
-  console.log(userInfo);
-
   useEffect(() => {
     if (userInfo && userInfo.name) {
       return navigate("/");
@@ -20,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     const formdata = e.target;
     const email = formdata.email.value;
-    const name = formdata.name.value;
+    const name = formdata.user.value;
     const password = formdata.password.value;
     const userData = { email, name, password };
 
@@ -33,7 +31,11 @@ const Login = () => {
       <div className="w-full  h-[88vh] flex justify-center items-center">
         <div className="px-10 py-16 bg-black/75  backdrop-blur-sm rounded-lg">
           <h1 className="text-white text-3xl font-semibold mb-10">Login In</h1>
-          <form className="flex flex-col gap-5" onSubmit={submitHandler}>
+          <form
+            className="flex flex-col gap-5"
+            onSubmit={submitHandler}
+            data-testid="userForm"
+          >
             <input
               type="email"
               placeholder="Email or Phone number"
@@ -46,7 +48,7 @@ const Login = () => {
               type="text"
               placeholder="Enter user name"
               id="name"
-              name="name"
+              name="user"
               autoComplete="off"
               className=" text-[#8C8C8C] placeholder:text-[#8C8C8C]  p-4 w-[400px] bg-[#333333] rounded-lg"
             />

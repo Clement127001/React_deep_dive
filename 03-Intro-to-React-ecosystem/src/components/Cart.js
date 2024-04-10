@@ -56,6 +56,7 @@ const Cart = () => {
         <button
           className="border-2 border-solid border-red-500 py-2 px-4 rounded-md flex gap-2 items-center"
           onClick={clearCartHandler}
+          data-testid="clearItems"
         >
           <img src={del} width={16} />
           <span className="text-red-500 font-sans"> Clear cart</span>

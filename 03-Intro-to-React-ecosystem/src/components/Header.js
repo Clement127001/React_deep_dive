@@ -29,7 +29,10 @@ export default Header = () => {
             <li>
               <p className="text-lg font-normal text-gray-600">
                 Hello,{" "}
-                <span className="text-xl text-black font-semibold">
+                <span
+                  className="text-xl text-black font-semibold"
+                  data-testid="userName"
+                >
                   {userInfo.name}
                 </span>{" "}
               </p>

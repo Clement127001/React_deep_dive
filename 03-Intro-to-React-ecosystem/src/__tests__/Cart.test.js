@@ -77,4 +77,31 @@ describe("test cart flow", () => {
     const cartItems = screen.getAllByTestId("cartItem");
     expect(cartItems.length).toBe(2);
   });
+
+  it("should clear items when clicking the clear items", () => {
+    act(() =>
+      render(
+        <BrowserRouter>
+          <Provider store={appStore}>
+            <Header />
+            <MenuContainer menus={MenuData} />
+            <Cart />
+          </Provider>
+        </BrowserRouter>
+      )
+    );
+
+    const accordionHeading = screen.getByText("Dry Fruit Sweets (");
+    fireEvent.click(accordionHeading);
+
+    const cartButton = screen.getAllByTestId("cartBtn");
+    fireEvent.click(cartButton[0]);
+    fireEvent.click(cartButton[1]);
+
+    const clearItem = screen.getByTestId("clearItems");
+    fireEvent.click(clearItem);
+
+    const noCartItems = screen.getByRole("heading", { name: "Cart is empty" });
+    expect(noCartItems).toBeInTheDocument();
+  });
 });
