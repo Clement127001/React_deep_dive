@@ -1,11 +1,11 @@
 import React from "react";
 import SideBar from "./SideBar";
-import VideoContainer from "./VideoContainer";
-
+import Body from "./Body";
 const MainContainer = () => {
   return (
-    <div>
+    <div className="flex relative">
       <SideBar />
+      <Body />
     </div>
   );
 };
