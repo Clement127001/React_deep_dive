@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .slide-in {
-    animation: 500ms slideIn linear;
+    animation: 400ms slideIn linear;
 }
 
 .slide-out {
@@ -25,8 +25,6 @@
 }
 
 @keyframes slideOut {
-
-
     0% {
         transform: translateX(0%);
         visibility: 1;
@@ -36,6 +34,7 @@
     100% {
         transform: translateX(-100%);
         visibility: hidden;
+        display: none;
         opacity: 0;
     }
 }

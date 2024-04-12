@@ -1,6 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleSideBar } from "../utils/Store/sideBarSlice";
 import { hamBurger, logo, search, user } from "../assets";
 const Header = () => {
+  const dispatch = useDispatch();
+  const hamBurgerClikHandler = () => {
+    dispatch(toggleSideBar());
+  };
   return (
     <div className="flex justify-between items-center px-6 shadow-lg">
       <div className="flex justify-center items-center">
@@ -8,7 +14,8 @@ const Header = () => {
           src={hamBurger}
           width={24}
           alt="sidebar control"
-          className=" cursor-pointer"
+          className=" cursor-pointer ml-5"
+          onClick={hamBurgerClikHandler}
         />
         <a href="/">
           <img src={logo} width={160} alt="home" />
