@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleSideBar } from "../utils/Store/sideBarSlice";
 import { hamBurger, logo, search, user } from "../assets";
@@ -17,9 +18,9 @@ const Header = () => {
           className=" cursor-pointer ml-5"
           onClick={hamBurgerClikHandler}
         />
-        <a href="/">
+        <NavLink to="/">
           <img src={logo} width={160} alt="home" />
-        </a>
+        </NavLink>
       </div>
 
       <div className="flex items-center w-[500px]">
