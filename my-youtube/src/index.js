@@ -32,3 +32,5 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+//the idea is to store the data on to the store
