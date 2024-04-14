@@ -26,13 +26,16 @@ const VideoCard = ({ data }) => {
 
   return (
     <NavLink to={"/watch?v=" + id + "&channelId=" + channelId}>
-      <div className="max-w-[340px] max-h-[300px] ">
-        <div className="w-full h-[62%] mb-2">
+      <div className="max-w-[340px] max-h-[400px]">
+        <div
+          className="w-full h-[190px] mb-2
+         "
+        >
           {" "}
           <img
             src={high.url}
             alt="title"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-[100%] object-cover rounded-lg"
           />
         </div>
 
