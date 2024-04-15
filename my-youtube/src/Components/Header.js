@@ -41,7 +41,7 @@ const Header = () => {
   }, [searchInput]);
 
   return (
-    <div className="flex justify-between items-center shadow-lg">
+    <div className="flex gap-80 items-center shadow-lg px-4">
       <div className="flex justify-center items-center">
         <img
           src={hamBurger}
@@ -77,6 +77,7 @@ const Header = () => {
                 to={"/search?q=" + item}
                 key={item}
                 className="flex mb-4 gap-4 items-center"
+                onClick={() => setShowSuggestions(false)}
               >
                 <img src={search} alt="search" width={24} />
                 <span className="font-sans">{item}</span>
@@ -86,7 +87,7 @@ const Header = () => {
         )}
       </div>
 
-      <div className="h-fit cursor-pointer">
+      <div className="h-fit cursor-pointer items-end">
         <img src={user} alt="user-img" width={36} />
       </div>
     </div>

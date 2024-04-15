@@ -4,7 +4,10 @@ const Comment = ({ data }) => {
   const { name, text } = data;
 
   return (
-    <div className="flex items-center bg-gray-100 rounded-lg mb-4 p-4 gap-4">
+    <div
+      className="flex items-center bg-gray-100 rounded-lg mb-4 p-4 gap-4"
+      key={data.id}
+    >
       <img
         src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
         width={32}
@@ -20,8 +23,8 @@ const Comment = ({ data }) => {
 
 const CommentList = ({ comments }) => {
   return comments.map((comment) => (
-    <div>
-      <Comment key={comment.name} data={comment} />
+    <div key={comment.name}>
+      <Comment data={comment} />
       <div className="ml-8 border-l-2 border-s-gray-300 rounded-t-lg">
         {comment.replies && comment.replies.length > 0 && (
           <CommentList comments={comment.replies} />

@@ -11,7 +11,7 @@ const VideoStats = ({ video, channel }) => {
     <div className="my-4">
       <h2 className="font-sans font-semibold text-lg line-clamp-1">{title}</h2>
 
-      <div className="flex mt-2 gap-2">
+      <div className="flex mt-2 gap-2 items-center">
         <img
           src={thumbnails.default.url}
           alt={channelTitle}

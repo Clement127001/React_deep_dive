@@ -2569,22 +2569,27 @@ export const channelDetail = {
 export const commentsData = [
   {
     name: "Akshay Saini",
+    id: "comment1",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [
       {
         name: "Akshay Saini",
+        id: "comment2",
         text: "Lorem ipsum dolor sit amet, consectetur adip",
         replies: [
           {
             name: "Akshay Saini",
             text: "Lorem ipsum dolor sit amet, consectetur adip",
+            id: "comment3",
             replies: [
               {
                 name: "Akshay Saini",
+                id: "comment4",
                 text: "Lorem ipsum dolor sit amet, consectetur adip",
               },
               {
                 name: "Akshay Saini",
+                id: "comment5",
                 text: "Lorem ipsum dolor sit amet, consectetur adip",
                 replies: [],
               },
@@ -2597,30 +2602,37 @@ export const commentsData = [
   {
     name: "Akshay Saini",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
+    id: "comment6",
     replies: [
       {
         name: "Akshay Saini",
         text: "Lorem ipsum dolor sit amet, consectetur adip",
+        id: "comment7",
         replies: [],
       },
       {
         name: "Akshay Saini",
         text: "Lorem ipsum dolor sit amet, consectetur adip",
+        id: "comment8",
         replies: [
           {
             name: "Akshay Saini",
             text: "Lorem ipsum dolor sit amet, consectetur adip",
+            id: "comment9",
             replies: [
               {
                 name: "Akshay Saini",
                 text: "Lorem ipsum dolor sit amet, consectetur adip",
+                id: "comment10",
                 replies: [
                   {
                     name: "Akshay Saini",
                     text: "Lorem ipsum dolor sit amet, consectetur adip",
+                    id: "comment11",
                     replies: [
                       {
                         name: "Akshay Saini",
+                        id: "comment12",
                         text: "Lorem ipsum dolor sit amet, consectetur adip",
                         replies: [],
                       },
@@ -2628,6 +2640,7 @@ export const commentsData = [
                   },
                   {
                     name: "Akshay Saini",
+                    id: "comment13",
                     text: "Lorem ipsum dolor sit amet, consectetur adip",
                     replies: [],
                   },
@@ -2641,22 +2654,1093 @@ export const commentsData = [
   },
   {
     name: "Akshay Saini",
+    id: "comment14",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
   {
     name: "Akshay Saini",
+    id: "comment14",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
   {
     name: "Akshay Saini",
+    id: "comment15",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
   {
     name: "Akshay Saini",
+    id: "comment16",
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
+  },
+];
+
+export const searchResults = [
+  {
+    kind: "youtube#searchResult",
+    etag: "RDqh0Q0M62CBG3SEeIB56xkaZZE",
+    id: {
+      kind: "youtube#playlist",
+      playlistId: "PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3",
+    },
+    snippet: {
+      publishedAt: "2018-10-29T12:01:47Z",
+      channelId: "UC80PWRj_ZU8Zu0HSMNVwKWw",
+      title: "ReactJS Tutorial for Beginners",
+      description:
+        "React is an open source javascript library for building user interfaces. React is a project created and maintained by Facebook.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/QFaFIcGhPoM/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/QFaFIcGhPoM/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/QFaFIcGhPoM/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Codevolution",
+      liveBroadcastContent: "none",
+      publishTime: "2018-10-29T12:01:47Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "4VOYecwFH5q3u2D7S86GTzkMhpI",
+    id: {
+      kind: "youtube#playlist",
+      playlistId: "PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP",
+    },
+    snippet: {
+      publishedAt: "2020-10-18T02:47:42Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "Namaste 🙏 JavaScript",
+      description:
+        "Namaste JavaScript is a pure in-depth JavaScript Course released for Free on Youtube. It will cover the core concepts of ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/pN6jk0uUrD8/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/pN6jk0uUrD8/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/pN6jk0uUrD8/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2020-10-18T02:47:42Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "JNDPSNPm9OehvatVSqNC-XBSxMc",
+    id: {
+      kind: "youtube#video",
+      videoId: "L0DWAVbdEaM",
+    },
+    snippet: {
+      publishedAt: "2022-07-05T10:40:46Z",
+      channelId: "UCr-9zHfv8a5xdv1_eV7n91Q",
+      title:
+        "React Most Asked Interview Question pt1 😎  #short #shorts #javascript  #react #developer #interview",
+      description:
+        "Get my Interview notes - https://frontendsecrets.com/ This video contains the Most asked Reactjs Interview Questions.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/L0DWAVbdEaM/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/L0DWAVbdEaM/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/L0DWAVbdEaM/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Sandip Guchait",
+      liveBroadcastContent: "none",
+      publishTime: "2022-07-05T10:40:46Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "dQFht08dnBxWlE2Q2jPaX68q1lU",
+    id: {
+      kind: "youtube#video",
+      videoId: "eILUmCJhl64",
+    },
+    snippet: {
+      publishedAt: "2023-11-04T02:25:41Z",
+      channelId: "UC7uzuZJIYzcxV9JJ1yAtHHg",
+      title:
+        "🚀🔥 React &amp; Redux Complete Course (2024) with Projects | Notes | Free Certification",
+      description:
+        "GitHub Code Repo: https://github.com/KG-Coding-with-Prashant-Sir/React_Complete_YouTube - Completion Certificate: ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/eILUmCJhl64/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/eILUmCJhl64/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/eILUmCJhl64/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "KG Coding by Prashant Sir",
+      liveBroadcastContent: "none",
+      publishTime: "2023-11-04T02:25:41Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "aOfckmcnSpbOgco0XwmYfHh9YWI",
+    id: {
+      kind: "youtube#video",
+      videoId: "gY5sGvq-8h8",
+    },
+    snippet: {
+      publishedAt: "2021-12-17T16:07:05Z",
+      channelId: "UCBwmMxybNva6P_5VmxjzwqA",
+      title:
+        "ReactJS Tutorial for Beginners | Learn React in 2.5 Hours | Part 1",
+      description:
+        "Project at : https://github.com/apna-college/ReactJS Java Placement Course ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/gY5sGvq-8h8/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/gY5sGvq-8h8/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/gY5sGvq-8h8/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Apna College",
+      liveBroadcastContent: "none",
+      publishTime: "2021-12-17T16:07:05Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "IM_tHudMVRdbjY9aB-f_8Zhb5ls",
+    id: {
+      kind: "youtube#video",
+      videoId: "zdp0zrpKzIE",
+    },
+    snippet: {
+      publishedAt: "2021-07-21T04:30:12Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "map, filter &amp; reduce 🙏 Namaste JavaScript Ep. 19 🔥",
+      description:
+        "Map, filter & reduce Array functions are the most popular Higher-Order Functions in JavaScript. This episode covers map(), filter() ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/zdp0zrpKzIE/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/zdp0zrpKzIE/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/zdp0zrpKzIE/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2021-07-21T04:30:12Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "Msvh0yBv2cjoueuXsFM5nH_ee3M",
+    id: {
+      kind: "youtube#video",
+      videoId: "qikxEIxsXco",
+    },
+    snippet: {
+      publishedAt: "2020-12-01T05:45:14Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "Closures in JS 🔥 | Namaste JavaScript Episode 10",
+      description:
+        "Closures in JavaScript is the most important topic for interviews. Even many senior frontend developers don't understand this ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/qikxEIxsXco/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/qikxEIxsXco/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/qikxEIxsXco/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2020-12-01T05:45:14Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "HW72AwMM1-BOnqQkoUOkLfq4qMQ",
+    id: {
+      kind: "youtube#video",
+      videoId: "83_7HQuIQfU",
+    },
+    snippet: {
+      publishedAt: "2023-10-13T11:10:58Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "Best ReactJS Course | Namaste React by Akshay Saini  🚀",
+      description:
+        "Use coupon code : CODE72 and register now by link below. Only valid for first 1000 students. Namaste React Website Link ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/83_7HQuIQfU/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/83_7HQuIQfU/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/83_7HQuIQfU/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2023-10-13T11:10:58Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "iYAdtaI5CC-cw1BG94DHyVI88S0",
+    id: {
+      kind: "youtube#video",
+      videoId: "--VcGI9iPvw",
+    },
+    snippet: {
+      publishedAt: "2023-12-14T14:38:45Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "Top 9 JavaScript topics to know before learning React JS in 2024",
+      description:
+        "Use coupon code : CODE72 and register now by link below. Only valid for first 500 students. Namaste React Website Link ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/--VcGI9iPvw/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/--VcGI9iPvw/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/--VcGI9iPvw/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2023-12-14T14:38:45Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "4JeuyitKEKqUUCQnPEYfT1FrKeU",
+    id: {
+      kind: "youtube#video",
+      videoId: "Y_r-51IzfGk",
+    },
+    snippet: {
+      publishedAt: "2021-08-20T14:17:25Z",
+      channelId: "UCeVMnSShP_Iviwkknt83cww",
+      title: "How much JavaScript is needed to learn React?",
+      description:
+        "How much Javascript to learn for react. Can you learn react along with Javascript? This video will answer all these questions!",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/Y_r-51IzfGk/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/Y_r-51IzfGk/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/Y_r-51IzfGk/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "CodeWithHarry",
+      liveBroadcastContent: "none",
+      publishTime: "2021-08-20T14:17:25Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "-pCNJHsPo1CFyl2xCH-fkHg4qXY",
+    id: {
+      kind: "youtube#video",
+      videoId: "eBTBG4nda2A",
+    },
+    snippet: {
+      publishedAt: "2020-12-07T14:30:02Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title:
+        "setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11",
+      description:
+        "Check out the most frequently asked (setTimeout + Closures in a loop) hot trending JS Interview question. This question will ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/eBTBG4nda2A/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/eBTBG4nda2A/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/eBTBG4nda2A/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2020-12-07T14:30:02Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "J4nB7DgveNJRaNr64hySPfW_P9I",
+    id: {
+      kind: "youtube#video",
+      videoId: "uH-tVP8MUs8",
+    },
+    snippet: {
+      publishedAt: "2020-10-27T09:22:43Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title:
+        "The Scope Chain, 🔥Scope &amp; Lexical Environment | Namaste JavaScript Ep. 7",
+      description:
+        "Diving deep into Scope, Lexical Environment, and The Scope Chain in JavaScript with a lot of code examples and visuals. This is ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/uH-tVP8MUs8/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/uH-tVP8MUs8/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/uH-tVP8MUs8/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2020-10-27T09:22:43Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "hR7DSIMWhR4kSOZZOEKsVbeVAvg",
+    id: {
+      kind: "youtube#video",
+      videoId: "6l8RWV8D-Yo",
+    },
+    snippet: {
+      publishedAt: "2023-02-08T01:30:03Z",
+      channelId: "UCmIu_lfYrSnfnNhH6kmcG2Q",
+      title:
+        "10-Hour React Tutorial 2023 - Zero to Advanced | Learn React JS in Hindi",
+      description:
+        "This is 10-hour React JS Master Class 2023 - from zero to advanced. You will learn all the concepts of react js in 1 video in ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/6l8RWV8D-Yo/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/6l8RWV8D-Yo/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/6l8RWV8D-Yo/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Coder Dost",
+      liveBroadcastContent: "none",
+      publishTime: "2023-02-08T01:30:03Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "sQu5-1xzaFY_0DzqZapO6lZR1os",
+    id: {
+      kind: "youtube#video",
+      videoId: "uE925hp9KDk",
+    },
+    snippet: {
+      publishedAt: "2023-12-22T15:30:11Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title:
+        "Top 12 React Interview Questions 🔥 for Freshers &amp; Experienced  | Preparation 2024 🚀",
+      description:
+        "Use coupon code : CODE72 and register now by link below. Only for limited students. Namaste React Website Link ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/uE925hp9KDk/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/uE925hp9KDk/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/uE925hp9KDk/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2023-12-22T15:30:11Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "4jetk9hY-xwzW14HgzE_mVXGO8U",
+    id: {
+      kind: "youtube#video",
+      videoId: "HkWxvB1RJq0",
+    },
+    snippet: {
+      publishedAt: "2021-06-08T14:30:13Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title:
+        "Higher-Order Functions ft. Functional Programming | Namaste JavaScript Ep. 18",
+      description:
+        "Functional Programming is powered by Higher-Order Functions in JavaScript. And all this is possible because functions are ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/HkWxvB1RJq0/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/HkWxvB1RJq0/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/HkWxvB1RJq0/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2021-06-08T14:30:13Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "RSuqLKWp7RO4T1RFzWH7Stx-dDM",
+    id: {
+      kind: "youtube#video",
+      videoId: "ap-6PPAuK1Y",
+    },
+    snippet: {
+      publishedAt: "2022-10-08T15:44:08Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "Promises | Ep 02  Season 02 - Namaste JavaScript",
+      description:
+        "Promises is the new way of handling asynchronous operations in JavaScript. This episode of Namaste JavaScript Season 2 will ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/ap-6PPAuK1Y/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/ap-6PPAuK1Y/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/ap-6PPAuK1Y/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2022-10-08T15:44:08Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "R7hGNFeoZYJR8sdP6EQeKRwj50A",
+    id: {
+      kind: "youtube#video",
+      videoId: "RCZ8mvsKEu4",
+    },
+    snippet: {
+      publishedAt: "2024-01-12T14:30:17Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title:
+        "Namaste Frontend System Design 🚀 | Fundamentals, LLD, HLD &amp; Interview Questions",
+      description:
+        "Use coupon code : EARLYBIRD and register now by link below. Only valid for limited students. Namaste FSD Website Link ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/RCZ8mvsKEu4/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/RCZ8mvsKEu4/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/RCZ8mvsKEu4/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2024-01-12T14:30:17Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "cy3AcFJBx3S017T44q768ZApnuE",
+    id: {
+      kind: "youtube#video",
+      videoId: "QcNGBtnT7BI",
+    },
+    snippet: {
+      publishedAt: "2023-01-30T01:30:13Z",
+      channelId: "UCmIu_lfYrSnfnNhH6kmcG2Q",
+      title: "React JS interview 2023 Live Coding Round (Mock)",
+      description:
+        "Never faced React JS live coding round? You can experience React JS Interview Live coding round where a candidate is asked ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/QcNGBtnT7BI/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/QcNGBtnT7BI/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/QcNGBtnT7BI/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Coder Dost",
+      liveBroadcastContent: "none",
+      publishTime: "2023-01-30T01:30:13Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "r1TAX2ClPyjGS_zcUvRo4cQQjXI",
+    id: {
+      kind: "youtube#video",
+      videoId: "U9sDK8zTJ8Y",
+    },
+    snippet: {
+      publishedAt: "2023-11-29T14:30:09Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "[ Live ] React JS Interview 🤯 | Frontend UI Questions 🤒",
+      description:
+        "Wanna dive deep into React JS with me? Checkout my course, `Namaste React` - https://namastedev.com/learn/namaste-react ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/U9sDK8zTJ8Y/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/U9sDK8zTJ8Y/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/U9sDK8zTJ8Y/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2023-11-29T14:30:09Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "VjbpL4aeTuQHpcZIY8scOQHTrBg",
+    id: {
+      kind: "youtube#video",
+      videoId: "3sSGmA1ZjD8",
+    },
+    snippet: {
+      publishedAt: "2022-10-18T05:47:13Z",
+      channelId: "UCXiFvBv-DKqGdB8Oaz5fJ1A",
+      title:
+        "How to get hired as Frontend Developer in 2022 ft. @akshaymarch7 | Learn Web Development| Anshika",
+      description:
+        "Hey everyone, In this video I am talking to @akshaymarch7 and we are discussing about resources to become frontend developer ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/3sSGmA1ZjD8/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/3sSGmA1ZjD8/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/3sSGmA1ZjD8/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Anshika Gupta",
+      liveBroadcastContent: "none",
+      publishTime: "2022-10-18T05:47:13Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "a7ZJYGUHz47OcCpDiBnppq0rUyo",
+    id: {
+      kind: "youtube#video",
+      videoId: "_Y3XRruIVXA",
+    },
+    snippet: {
+      publishedAt: "2023-12-25T11:48:06Z",
+      channelId: "UC81Q2wnuk5KqOFVgAbq4nUw",
+      title: "How to get hired as Frontend Developer in 2024",
+      description:
+        "Join our DSA Course https://learnyard.com/courses/dsa Course detail video https://youtu.be/TgiY2GPrpf8 Podcast with Google ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/_Y3XRruIVXA/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/_Y3XRruIVXA/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/_Y3XRruIVXA/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Fraz",
+      liveBroadcastContent: "none",
+      publishTime: "2023-12-25T11:48:06Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "ohgd94kKUbcTZBgXzd5VF5UWr9c",
+    id: {
+      kind: "youtube#video",
+      videoId: "6nv3qy3oNkc",
+    },
+    snippet: {
+      publishedAt: "2023-09-15T05:59:52Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "async await | Namaste JavaScript - Season 02 - Ep 04",
+      description:
+        "Wanna dive deep into React JS with me? Checkout Namaste React - https://namastedev.com/namaste-react/?version=2 Use ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/6nv3qy3oNkc/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/6nv3qy3oNkc/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/6nv3qy3oNkc/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2023-09-15T05:59:52Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "ndd6FTmXcqw-qRspxt8AtZlw3OA",
+    id: {
+      kind: "youtube#video",
+      videoId: "9T4z98JcHR0",
+    },
+    snippet: {
+      publishedAt: "2023-12-31T15:30:10Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title:
+        "this keyword in JavaScript  🔥 |  Ep.06 - Namaste JavaScript Season 2 🙏",
+      description:
+        "End this year with learning some more of JavaScript ❤️ Share this video on social media to help me reach more people!",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/9T4z98JcHR0/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/9T4z98JcHR0/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/9T4z98JcHR0/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2023-12-31T15:30:10Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "aILSRxrRwKO4n68csgMhtGcEvow",
+    id: {
+      kind: "youtube#video",
+      videoId: "DlTVt1rZjIo",
+    },
+    snippet: {
+      publishedAt: "2023-10-19T15:30:03Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title:
+        "Promise APIs + Interview Questions 🔥 | S.02 Ep.05 - Namaste JavaScript  | all, allSettled, race, any",
+      description:
+        "Wanna dive deep into React JS with me? Checkout Namaste React - https://namastedev.com/learn/namaste-react Use coupon ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/DlTVt1rZjIo/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/DlTVt1rZjIo/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/DlTVt1rZjIo/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2023-10-19T15:30:03Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "b5R0GCkALpHDCeE32OB_Q-s94RA",
+    id: {
+      kind: "youtube#video",
+      videoId: "cTXn8VsgzTM",
+    },
+    snippet: {
+      publishedAt: "2023-05-14T14:30:11Z",
+      channelId: "UCNFmBuclxQPe57orKiQbyfA",
+      title:
+        "99% React Courses Miss These Essential Real-World Skills | Tanay Pratap Hindi",
+      description:
+        "Meetup link: https://lu.ma/tanaypratap Discover the crucial skills that most React courses overlook and learn how to differentiate ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/cTXn8VsgzTM/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/cTXn8VsgzTM/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/cTXn8VsgzTM/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Tanay Pratap",
+      liveBroadcastContent: "none",
+      publishTime: "2023-05-14T14:30:11Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "GN2nIy8bvTRxLeZnyGeGZli8-4I",
+    id: {
+      kind: "youtube#video",
+      videoId: "tsCoBd7xSK8",
+    },
+    snippet: {
+      publishedAt: "2021-10-08T09:45:25Z",
+      channelId: "UChPxqdfDbulLE9PyUqhijWw",
+      title:
+        "React Higher Order Components Tutorial | ReactJS HOC Pattern | React HOC in 30 Minutes for Beginners",
+      description:
+        "In this video we are going to learn everything about Higher-Order Components in React. HOC is an advanced technique in React ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/tsCoBd7xSK8/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/tsCoBd7xSK8/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/tsCoBd7xSK8/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Dipesh Malvia",
+      liveBroadcastContent: "none",
+      publishTime: "2021-10-08T09:45:25Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "t01IbKym6mITRyplSQzq8hcZ2LM",
+    id: {
+      kind: "youtube#video",
+      videoId: "c2gJMmGx4BI",
+    },
+    snippet: {
+      publishedAt: "2024-03-31T05:41:10Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "Launching, Namaste Dating - app that finds your soulmate ❤️",
+      description:
+        "Super excited to launch our new product, `Namaste Dating` Register on Namaste Dating now - https://dating.namastedev.com ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/c2gJMmGx4BI/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/c2gJMmGx4BI/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/c2gJMmGx4BI/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2024-03-31T05:41:10Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "oLoyq0FA4_7hy3KaqCA5GO6znHQ",
+    id: {
+      kind: "youtube#video",
+      videoId: "DlDETHHVmFU",
+    },
+    snippet: {
+      publishedAt: "2023-07-21T10:39:03Z",
+      channelId: "UCNQ6FEtztATuaVhZKCY28Yw",
+      title: "React Paid course launch",
+      description:
+        "Visit https://chaicode.com for all related materials, community help, source code etc. Sara code yaha milta h ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/DlDETHHVmFU/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/DlDETHHVmFU/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/DlDETHHVmFU/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Chai aur Code",
+      liveBroadcastContent: "none",
+      publishTime: "2023-07-21T10:39:03Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "v_GQfhPo7I8nQbUgMIOH3OY3m0k",
+    id: {
+      kind: "youtube#video",
+      videoId: "6cdbnuTr6ng",
+    },
+    snippet: {
+      publishedAt: "2024-01-15T14:30:01Z",
+      channelId: "UC3N9i_KvKZYP4F84FPIzgPQ",
+      title: "Want Namaste React for FREE ? 🥲 #reactjs",
+      description:
+        "If this video was helpful, give it a thumbs up and subscribe to my channel for more such videos. Link to Subscribe: ...",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/6cdbnuTr6ng/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/6cdbnuTr6ng/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/6cdbnuTr6ng/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "Akshay Saini",
+      liveBroadcastContent: "none",
+      publishTime: "2024-01-15T14:30:01Z",
+    },
+  },
+  {
+    kind: "youtube#searchResult",
+    etag: "-93Kt6btkoIdWdI_Rv42-R2hIvM",
+    id: {
+      kind: "youtube#video",
+      videoId: "L9M_VDNTVCw",
+    },
+    snippet: {
+      publishedAt: "2023-06-19T15:17:44Z",
+      channelId: "UCcMmwWhgdFCrO31Ff48UIOA",
+      title: "No Interview Calls in React Js?",
+      description:
+        'Join the Telegram Channel Join "SSQUAREIT (REACT,MERN,MEAN)" on Telegram: https://t.me/PremiumPlacementReactjs ...',
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/L9M_VDNTVCw/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/L9M_VDNTVCw/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/L9M_VDNTVCw/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "SSquareIT Solutions",
+      liveBroadcastContent: "none",
+      publishTime: "2023-06-19T15:17:44Z",
+    },
   },
 ];
