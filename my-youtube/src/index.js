@@ -7,6 +7,7 @@ import App from "./App";
 import appStore from "./utils/Store/appStore";
 import MainContainer from "./Components/MainContainer";
 import Watch from "./Components/Watch";
+import SearchResults from "./Components/SearchResults";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/watch",
         element: <Watch />,
+      },
+      {
+        path: "/search",
+        element: <SearchResults />,
       },
     ],
   },

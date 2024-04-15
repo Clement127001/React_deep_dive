@@ -4,6 +4,7 @@ import { videoDetail, channelDetail } from "../utils/constants";
 import SuggestionList from "./SuggestionList";
 import WatchShimmer from "./Shimmer/WatchShimmer";
 import VideoStats from "./VideoStats";
+import Comments from "./Comments";
 
 const Watch = () => {
   const [searchParams] = useSearchParams();
@@ -62,6 +63,8 @@ const Watch = () => {
         ></iframe>
         {/* channel details */}
         <VideoStats video={videoDetails} channel={channelDetails} />
+
+        <Comments />
       </div>
 
       <SuggestionList />

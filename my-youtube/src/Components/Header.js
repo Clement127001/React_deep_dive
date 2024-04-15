@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSideBar } from "../utils/Store/sideBarSlice";
 import { hamBurger, logo, search, user } from "../assets";
@@ -10,8 +10,6 @@ const Header = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchResults = useSelector((store) => store.search);
-
-  console.log(searchResults);
 
   const dispatch = useDispatch();
   const hamBurgerClikHandler = () => {
@@ -65,7 +63,6 @@ const Header = () => {
             className="border-2 border-gray-200 p-2 pl-4  w-full rounded-full rounded-r-none"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-            onBlur={() => setShowSuggestions(false)}
             onFocus={() => setShowSuggestions(true)}
           />
           <div className="border-2 border-gray-200 p-2  bg-gray-200 border-l-0 rounded-r-full cursor-pointer">
@@ -76,10 +73,14 @@ const Header = () => {
         {showSuggestions && suggestions.length > 0 && (
           <ul className=" w-[500px] absolute z-10 bg-white py-4 px-6 rounded-lg shadow-lg">
             {suggestions.map((item) => (
-              <li key={item} className="flex mb-4 gap-4 items-center">
+              <Link
+                to={"/search?q=" + item}
+                key={item}
+                className="flex mb-4 gap-4 items-center"
+              >
                 <img src={search} alt="search" width={24} />
                 <span className="font-sans">{item}</span>
-              </li>
+              </Link>
             ))}
           </ul>
         )}
