@@ -7,7 +7,7 @@ const FilterBtns = () => {
       {FilterBtnsList.map((item) => (
         <button
           key={item}
-          className=" bg-gray-100 text-[1rem] font-sans font-[500] py-2 px-4 rounded-lg min-w-fit "
+          className=" bg-gray-100 text-[1rem] font-sans font-[500] py-2 px-4 rounded-lg min-w-fit hover:bg-gray-200 "
         >
           {item}
         </button>

@@ -1,7 +1,6 @@
 import React from "react";
 
 const VideoStats = ({ video, channel }) => {
-  console.log(video, channel);
   const { snippet: videoSnippet, statistics } = video;
   const { snippet: channelSnippet } = channel;
 
