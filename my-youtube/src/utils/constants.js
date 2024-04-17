@@ -59,6 +59,143 @@ export const FilterBtnsList = [
   "Stoicism",
 ];
 
+export const chatArray = [
+  { name: "Chris", message: "React is just awesome" },
+  { name: "akshay", message: "React is the most powerful thing in the world" },
+  { name: "Emma", message: "React simplifies complex UI development" },
+  {
+    name: "John",
+    message: "React's virtual DOM makes rendering lightning fast",
+  },
+  {
+    name: "Sophia",
+    message: "I'm amazed by React's component-based architecture",
+  },
+  { name: "Michael", message: "React ecosystem offers endless possibilities" },
+  { name: "Ava", message: "React hooks revolutionized state management" },
+  { name: "William", message: "React makes building SPAs a breeze" },
+  { name: "Olivia", message: "Learning React was the best decision I made" },
+  { name: "James", message: "React's community support is unparalleled" },
+  {
+    name: "Alexander",
+    message: "I can't imagine frontend development without React",
+  },
+  { name: "Isabella", message: "React's declarative syntax is a game-changer" },
+  {
+    name: "Liam",
+    message: "React Native is perfect for cross-platform mobile apps",
+  },
+  { name: "Charlotte", message: "React's documentation is top-notch" },
+  { name: "Benjamin", message: "React's performance is unmatched" },
+  { name: "Amelia", message: "React's developer tools are incredibly helpful" },
+  { name: "Lucas", message: "React's ecosystem keeps evolving for the better" },
+  { name: "Mia", message: "React makes building interactive UIs fun" },
+  { name: "Henry", message: "I'm excited about the future of React" },
+  {
+    name: "Harper",
+    message: "React enables me to build scalable applications",
+  },
+  {
+    name: "Ethan",
+    message: "React is a game-changer for frontend development",
+  },
+  {
+    name: "Avery",
+    message: "I'm passionate about React and its possibilities",
+  },
+  { name: "Samuel", message: "React hooks make managing state effortless" },
+  { name: "Sofia", message: "I'm constantly learning new things with React" },
+  { name: "Sebastian", message: "React's component reusability saves me time" },
+  { name: "Ella", message: "React's JSX syntax is elegant and intuitive" },
+  { name: "Gabriel", message: "I love the simplicity and power of React" },
+  {
+    name: "Scarlett",
+    message: "React's one-way data flow makes debugging easier",
+  },
+  { name: "Carter", message: "I'm amazed by the performance of React apps" },
+  { name: "Grace", message: "React's component lifecycle methods are useful" },
+  { name: "Anthony", message: "React's community is welcoming and supportive" },
+  {
+    name: "Chloe",
+    message: "React's composition model is flexible and powerful",
+  },
+  {
+    name: "Christopher",
+    message: "I'm excited to explore React's server-side rendering",
+  },
+  {
+    name: "Victoria",
+    message: "React's error boundaries improve application stability",
+  },
+  {
+    name: "Riley",
+    message: "I'm impressed by the ecosystem of React libraries",
+  },
+  {
+    name: "Max",
+    message: "React's context API simplifies state management in complex apps",
+  },
+  {
+    name: "Aria",
+    message: "React's controlled components make form handling easy",
+  },
+  { name: "Jackson", message: "I enjoy building responsive UIs with React" },
+  {
+    name: "Lily",
+    message: "React's useEffect hook is a powerful tool for side effects",
+  },
+  {
+    name: "John",
+    message: "React's memoization techniques improve performance",
+  },
+  {
+    name: "Layla",
+    message: "React's reconciliation algorithm is efficient and reliable",
+  },
+  {
+    name: "Ryan",
+    message: "I'm excited about the potential of React concurrent mode",
+  },
+  {
+    name: "Brooklyn",
+    message: "React's server-side rendering improves SEO for web apps",
+  },
+  {
+    name: "Nicholas",
+    message: "I'm amazed by the speed of React's development",
+  },
+  {
+    name: "Zoe",
+    message:
+      "React's useEffect hook is a game-changer for managing side effects",
+  },
+  {
+    name: "Nathan",
+    message:
+      "React's useMemo hook optimizes performance in functional components",
+  },
+  {
+    name: "Penelope",
+    message: "I'm excited to explore the possibilities of React's suspense",
+  },
+  {
+    name: "Logan",
+    message: "React's strict mode catches common bugs early in development",
+  },
+  {
+    name: "Nora",
+    message: "I appreciate the accessibility features built into React",
+  },
+  {
+    name: "Jonathan",
+    message: "React's error handling with componentDidCatch is robust",
+  },
+  {
+    name: "Camila",
+    message: "I'm fascinated by the performance optimizations in React Fiber",
+  },
+];
+
 export const dummyData = [
   {
     kind: "youtube#video",

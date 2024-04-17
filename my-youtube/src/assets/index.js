@@ -11,6 +11,8 @@ import shop from "./shop.webp";
 import user from "./user.webp";
 import watchLater from "./watchLater.webp";
 import search from "./search.webp";
+import arrowUp from "./arrow-up.png";
+import arrowDown from "./arrow-down.png";
 
 export {
   logo,
@@ -26,4 +28,6 @@ export {
   user,
   watchLater,
   search,
+  arrowDown,
+  arrowUp,
 };

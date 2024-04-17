@@ -15,11 +15,7 @@ const searchItemsList = [];
 for (let i = 0; i < 15; i++) searchItemsList.push(<SearchItemShimmer />);
 
 const SearchShimmer = () => {
-  return (
-    <div className="w-full flex items-center justify-center my-10 animate-pulse">
-      <div className="w-7/12">{searchItemsList}</div>
-    </div>
-  );
+  return <div className="w-7/12 animate-pulse">{searchItemsList}</div>;
 };
 
 export default SearchShimmer;

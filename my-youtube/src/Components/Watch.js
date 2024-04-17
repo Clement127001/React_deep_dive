@@ -5,6 +5,7 @@ import SuggestionList from "./SuggestionList";
 import WatchShimmer from "./Shimmer/WatchShimmer";
 import VideoStats from "./VideoStats";
 import Comments from "./Comments";
+import Chat from "./Chat";
 
 const Watch = () => {
   const [searchParams] = useSearchParams();
@@ -45,7 +46,7 @@ const Watch = () => {
     fetchMutipleDummyData();
   }, []);
 
-  return videoDetails.length == 0 ? (
+  return videoDetails.length === 0 ? (
     <WatchShimmer />
   ) : (
     <div className="flex gap-8 m-8">
@@ -66,8 +67,10 @@ const Watch = () => {
 
         <Comments />
       </div>
-
-      <SuggestionList />
+      <div>
+        <Chat />
+        <SuggestionList />
+      </div>
     </div>
   );
 };

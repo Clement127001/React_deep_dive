@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { searchResults as obtainedSearchResults } from "../utils/constants";
 import SearchShimmer from "./Shimmer/SearchShimmer";
+import SearchItem from "./SearchItem";
 
 const SearchResults = () => {
   const [searchParams] = useSearchParams();
@@ -26,10 +27,12 @@ const SearchResults = () => {
     fetchSearchResults();
   }, []);
 
-  return !searchResults.length > 0 ? (
-    <SearchShimmer />
-  ) : (
-    <div>SearchResults</div>
+  return (
+    <div className="w-full flex flex-col items-center justify-center my-10 gap-10">
+      {!searchResults.length > 0 && <SearchShimmer />}
+      {searchResults.length > 0 &&
+        searchResults.map((item) => <SearchItem data={item} key={item.id} />)}
+    </div>
   );
 };
 
