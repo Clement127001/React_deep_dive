@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -6,8 +6,12 @@ import "./index.css";
 import App from "./App";
 import appStore from "./utils/Store/appStore";
 import MainContainer from "./Components/MainContainer";
-import Watch from "./Components/Watch";
-import SearchResults from "./Components/SearchResults";
+
+// import SearchResults from "./Components/SearchResults";
+// import Watch from "./Components/Watch";
+const Watch = lazy(() => import("./Components/Watch"));
+const SearchResults = lazy(() => import("./Components/SearchResults"));
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,11 +23,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/watch",
-        element: <Watch />,
+        element: (
+          <Suspense fallback={<p>Loading....</p>}>
+            <Watch />
+          </Suspense>
+          // <Watch />
+        ),
       },
       {
         path: "/search",
-        element: <SearchResults />,
+        element: (
+          <Suspense fallback={<p>Loading your search result</p>}>
+            <SearchResults />
+          </Suspense>
+        ),
       },
     ],
   },
