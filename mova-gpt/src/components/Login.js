@@ -1,10 +1,16 @@
 import { useRef, useState } from "react";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { validateForm } from "../utils/validateForm";
+import { auth } from "../utils/firebase";
 import loginBg from "../asset/loginBack.webp";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [formValidations, setFormValidations] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -14,17 +20,62 @@ const Login = () => {
 
   const signInToggler = () => {
     setIsSignIn((prev) => !prev);
+    setFormValidations({});
   };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    const validationResult = validateForm(
-      emailRef.current.value,
-      passwordRef.current.value
-    );
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
 
+    //validation on inputs
+    const validationResult = validateForm(email, password);
     setFormValidations(validationResult);
+
+    if (validationResult) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    //sign up
+    if (!isSignIn) {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          setIsSubmitting(false);
+          // console.log(user);
+        })
+        .catch((error) => {
+          // const errorCode = error.code;
+          // const errorMessage = error.message;
+
+          const err = {
+            emailErrorMessage: "Email is already in use, try to sign in",
+          };
+          setFormValidations({ ...err });
+
+          setIsSubmitting(false);
+        });
+    } else {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+
+          setIsSubmitting(false);
+        })
+
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+
+          setFormValidations({
+            passwordErrorMessage: "Invalid credentials",
+          });
+          setIsSubmitting(false);
+        });
+    }
   };
 
   return (
@@ -80,8 +131,19 @@ const Login = () => {
                 {formValidations.passwordErrorMessage}
               </p>
             )}
-            <button className="w-full text-center font-sans text-xl text-white py-2 px-4 rounded-lg cursor-pointer bg-red-600 mt-6">
-              {isSignIn ? "Sign In" : "Sign Up"}
+
+            <button
+              className={`w-full  font-sans text-xl text-white py-2 px-4 rounded-lg cursor-pointer bg-red-600 mt-6 flex items-center  justify-center ${
+                isSubmitting ? "sign-in" : ""
+              }`}
+            >
+              {isSignIn
+                ? isSubmitting
+                  ? "Signing In"
+                  : "Sign In"
+                : isSubmitting
+                ? "Signing Up"
+                : "Sign Up"}
             </button>
           </form>
 
