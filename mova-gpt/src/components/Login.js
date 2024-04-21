@@ -45,6 +45,7 @@ const Login = () => {
           <form className="py-4" onSubmit={formSubmitHandler}>
             {!isSignIn && (
               <input
+                required
                 type="text"
                 placeholder="Name"
                 ref={nameRef}
@@ -55,7 +56,11 @@ const Login = () => {
               type="email"
               placeholder="Email"
               ref={emailRef}
-              className="h-[2.5rem] bg-[#333333] text-white placeholder:text-[#8C8C8C] text-lg w-full p-6 font-sm rounded-md mt-4"
+              className={`h-[2.5rem] bg-[#333333] text-white placeholder:text-[#8C8C8C] text-lg w-full p-6 font-sm rounded-md mt-4  ${
+                formValidations &&
+                formValidations.emailErrorMessage &&
+                "border-2 border-red-500"
+              }`}
             />
             {formValidations && formValidations.emailErrorMessage && (
               <p className={errorStyle}>{formValidations.emailErrorMessage}</p>
@@ -64,7 +69,11 @@ const Login = () => {
               type="password"
               placeholder="Enter your password here"
               ref={passwordRef}
-              className="h-[2.5rem] bg-[#333333] text-white placeholder:text-[#8C8C8C] text-lg w-full p-6 font-sm rounded-md mt-4"
+              className={`h-[2.5rem] bg-[#333333] text-white placeholder:text-[#8C8C8C] text-lg w-full p-6 font-sm rounded-md mt-4 ${
+                formValidations &&
+                formValidations.passwordErrorMessage &&
+                "border-2 border-solid border-red-500"
+              }`}
             />
             {formValidations && formValidations.passwordErrorMessage && (
               <p className={errorStyle}>

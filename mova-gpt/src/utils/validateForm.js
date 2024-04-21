@@ -1,5 +1,7 @@
 export const validateForm = (email, password) => {
   const validationResult = {};
+  if (email.trim().length == 0)
+    validationResult["emailErrorMessage"] = "Please enter email";
   if (password.length < 7) {
     validationResult["passwordErrorMessage"] =
       "password must contain atleast 7 characters";
