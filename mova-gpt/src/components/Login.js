@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { validateForm } from "../utils/validateForm";
 import { auth } from "../utils/firebase";
@@ -29,6 +30,7 @@ const Login = () => {
 
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+    const name = nameRef?.current?.value || null;
 
     //validation on inputs
     const validationResult = validateForm(email, password);
@@ -44,7 +46,18 @@ const Login = () => {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
-          setIsSubmitting(false);
+
+          updateProfile(auth.currentUser, {
+            displayName: name,
+          })
+            .then(() => {
+              setIsSubmitting(false);
+            })
+            .catch((error) => {
+              // An error occurred
+              // ...
+            });
+
           // console.log(user);
         })
         .catch((error) => {
@@ -69,6 +82,8 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
+
+          console.log(errorCode);
 
           setFormValidations({
             passwordErrorMessage: "Invalid credentials",

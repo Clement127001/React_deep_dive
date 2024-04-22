@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./index.css";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 import App from "./App";
 import Login from "./components/Login";
 import Browse from "./components/Browse";
+import Error from "./components/Error";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -20,7 +23,15 @@ const router = createBrowserRouter([
         path: "/browse",
         element: <Browse />,
       },
+      {
+        path: "/error",
+        element: <Error />,
+      },
     ],
   },
 ]);
-root.render(<RouterProvider router={router} />);
+root.render(
+  <Provider store={appStore}>
+    <RouterProvider router={router} />
+  </Provider>
+);
