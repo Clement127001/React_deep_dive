@@ -9,19 +9,20 @@ import Header from "./components/Header";
 function App() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log(user);
         const { displayName, email, uid } = user;
-
         dispatch(addUser({ displayName, email, uid }));
-        // ...
         navigate("/browse");
       } else {
         navigate("/");
       }
     });
+
+    return () => unSubscribe();
   }, []);
   return (
     <div className="relative min-h-screen">

@@ -44,7 +44,6 @@ const Login = () => {
       return;
     }
 
-    //sign up
     if (!isSignIn) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -63,17 +62,9 @@ const Login = () => {
               );
               setIsSubmitting(false);
             })
-            .catch((error) => {
-              // An error occurred
-              // ...
-            });
-
-          // console.log(user);
+            .catch((error) => {});
         })
         .catch((error) => {
-          // const errorCode = error.code;
-          // const errorMessage = error.message;
-
           const err = {
             emailErrorMessage: "Email is already in use, try to sign in",
           };
@@ -85,16 +76,10 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
-
           setIsSubmitting(false);
         })
 
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-
-          console.log(errorCode);
-
           setFormValidations({
             passwordErrorMessage: "Invalid credentials",
           });

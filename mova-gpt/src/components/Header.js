@@ -4,7 +4,7 @@ import { auth } from "../utils/firebase";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeUser } from "../utils/userSlice";
-
+import { USER_AVATAR } from "../utils/constants";
 import logo from "../asset/mova-logo.webp";
 
 const Header = () => {
@@ -12,18 +12,13 @@ const Header = () => {
   const { userInfo: user } = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
-  console.log(user);
-
   const logoutHandler = () => {
     signOut(auth)
       .then(() => {
         dispatch(removeUser());
-        navigate("/");
-        // Sign-out successful.
       })
       .catch((error) => {
         navigate("/error");
-        // An error happened.
       });
   };
   return (
@@ -36,7 +31,7 @@ const Header = () => {
         <div className="flex gap-6 items-center">
           <div className="flex flex-col items-center">
             <img
-              src="https://images6.alphacoders.com/714/714397.jpg"
+              src={USER_AVATAR}
               className="w-10 h-10 object-cover rounded-full"
               alt="user image"
             />
