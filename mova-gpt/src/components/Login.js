@@ -4,14 +4,17 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { validateForm } from "../utils/validateForm";
 import { auth } from "../utils/firebase";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { validateForm } from "../utils/validateForm";
 import loginBg from "../asset/loginBack.webp";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [formValidations, setFormValidations] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const dispatch = useDispatch();
 
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -51,6 +54,13 @@ const Login = () => {
             displayName: name,
           })
             .then(() => {
+              dispatch(
+                addUser({
+                  displayName: user.displayName,
+                  email: user.email,
+                  uid: user.uid,
+                })
+              );
               setIsSubmitting(false);
             })
             .catch((error) => {
