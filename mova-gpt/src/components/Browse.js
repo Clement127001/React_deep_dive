@@ -1,7 +1,12 @@
 import React from "react";
+import BannerContainer from "./BannerContainer";
 
 const Browse = () => {
-  return <div>Browse</div>;
+  return (
+    <div>
+      <BannerContainer />
+    </div>
+  );
 };
 
 export default Browse;
