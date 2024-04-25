@@ -13,6 +13,7 @@ const BannerCard = ({ movie, onUpdate, active }) => {
     <img
       src={IMAGE_BASE_URL + "w154" + poster_path}
       alt={original_title}
+      loading={active === id ? "eager" : "lazy"}
       onClick={updateCurrentMovieHandler}
       className={`sm:w-[200px] w-[130px] h-full rounded-lg cursor-pointer ${
         active === id ? "opacity-100" : "opacity-80"

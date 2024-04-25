@@ -11,23 +11,26 @@ const BannerContainer = () => {
 
   const dispatch = useDispatch();
   async function fetchMovieDetails() {
-    // try {
-    //   const moviesData = await fetch(
-    //     "https://api.themoviedb.org/3/movie/popular?language=en-US&page=2",
-    //     OPTIONS
-    //   );
-    //   const movies = await moviesData.json();
-    //   console.log(movies);
-    // } catch (err) {
-    //   console.log(err);
-    // }
+    try {
+      const moviesData = await fetch(
+        "https://api.themoviedb.org/3/movie/popular?language=en-US&page=2",
+        OPTIONS
+      );
+      const movies = await moviesData.json();
+      dispatch(addMoviesList(movies.results));
 
-    setTimeout(() => {
-      dispatch(addMoviesList(bannerData));
-
-      const { id, backdrop_path, original_title, overview } = bannerData[0];
+      const { id, backdrop_path, original_title, overview } = movies.results[0];
       setCurrentMovie({ id, backdrop_path, original_title, overview });
-    }, 500);
+    } catch (err) {
+      console.log(err);
+    }
+
+    // setTimeout(() => {
+    //   dispatch(addMoviesList(bannerData));
+
+    //   const { id, backdrop_path, original_title, overview } = bannerData[0];
+    //   setCurrentMovie({ id, backdrop_path, original_title, overview });
+    // }, 500);
   }
   useEffect(() => {
     fetchMovieDetails();
@@ -35,16 +38,14 @@ const BannerContainer = () => {
 
   const handleUpdate = (currId) => {
     const result = moviesList.filter((item) => item.id === currId);
-
     const { id, backdrop_path, original_title, overview } = result[0];
-
     setCurrentMovie({ id, backdrop_path, original_title, overview });
   };
 
   return moviesList == null && currentMovie == null ? (
     <p className="text-center">Loading</p>
   ) : (
-    <div className="max-h-[92vh] w-full">
+    <div className="max-h-[92vh] w-full overflow-hidden outline-neutral-300">
       <div className="h-full">
         <img
           src={IMAGE_BASE_URL + "w1280" + currentMovie?.backdrop_path}

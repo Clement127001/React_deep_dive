@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user);
+        // console.log(user);
         const { displayName, email, uid } = user;
         dispatch(addUser({ displayName, email, uid }));
         navigate("/browse");
