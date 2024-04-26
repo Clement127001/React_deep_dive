@@ -9,9 +9,10 @@ const MoviesList = ({ title, movies }) => {
       <div className="flex overflow-scroll py-6 gap-4 mb-4">
         {movies &&
           movies.map((item) => (
-            <div className="relative cursor-pointer">
+            <div className="relative cursor-pointer" key={item.title}>
               <img
                 src={IMAGE_BASE_URL + "w300" + item.poster_path}
+                alt={item.title}
                 className="rounded-lg min-w-[200px]"
               />
 

@@ -43,7 +43,7 @@ const BannerContainer = () => {
     <div className="static max-h-[92vh] w-full outline-neutral-300">
       <div className="h-full">
         <img
-          alt="banner-image"
+          alt="banner"
           src={IMAGE_BASE_URL + "w1280" + currentMovie?.backdrop_path}
           className="absolute  top-0 w-full h-full object-cover"
         />

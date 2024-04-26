@@ -8,10 +8,10 @@ const MoviesListContainer = () => {
 
   useFetchMainMovies();
 
-  if (mainMovies & (mainMovies.length == 0)) return;
+  if (mainMovies & (mainMovies.length === 0)) return;
 
   return (
-    <div className="py-10 px-8 bg-[#121418] max-w-[100vw]">
+    <div className="py-10 sm:pl-8 pl-4  bg-[#121418] max-w-[100vw]">
       {mainMovies.map((item, index) => (
         <MoviesList
           key={("movie", index)}
