@@ -9,6 +9,20 @@ export const OPTIONS = {
   },
 };
 
+export const fetchURLs = [
+  "https://api.themoviedb.org/3/movie/now_playing?page=1",
+  "https://api.themoviedb.org/3/movie/top_rated?page=1",
+  "https://api.themoviedb.org/3/movie/upcoming?page=1",
+  "https://api.themoviedb.org/3/movie/popular?page=1",
+];
+
+export const movieListTitle = [
+  "Now Playing",
+  "Popular",
+  "Top Rated",
+  "Upcoming",
+];
+
 export const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/";
 
 export const bannerData = [

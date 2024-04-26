@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { bannerData, IMAGE_BASE_URL, OPTIONS } from "../utils/constants";
+import { IMAGE_BASE_URL, OPTIONS } from "../utils/constants";
 import { addMoviesList } from "../utils/movieSlice";
 import BannerCard from "./BannerCard";
 
 const BannerContainer = () => {
   const [currentMovie, setCurrentMovie] = useState(null);
 
-  const moviesList = useSelector((store) => store.movie.moviesList);
+  const moviesList = useSelector(
+    (store) => store.movie.moviesList.bannerMovies
+  );
 
   const dispatch = useDispatch();
   async function fetchMovieDetails() {
@@ -24,13 +26,6 @@ const BannerContainer = () => {
     } catch (err) {
       console.log(err);
     }
-
-    // setTimeout(() => {
-    //   dispatch(addMoviesList(bannerData));
-
-    //   const { id, backdrop_path, original_title, overview } = bannerData[0];
-    //   setCurrentMovie({ id, backdrop_path, original_title, overview });
-    // }, 500);
   }
   useEffect(() => {
     fetchMovieDetails();
@@ -45,9 +40,10 @@ const BannerContainer = () => {
   return moviesList == null && currentMovie == null ? (
     <p className="text-center">Loading</p>
   ) : (
-    <div className="max-h-[92vh] w-full overflow-hidden outline-neutral-300">
+    <div className="static max-h-[92vh] w-full outline-neutral-300">
       <div className="h-full">
         <img
+          alt="banner-image"
           src={IMAGE_BASE_URL + "w1280" + currentMovie?.backdrop_path}
           className="absolute  top-0 w-full h-full object-cover"
         />

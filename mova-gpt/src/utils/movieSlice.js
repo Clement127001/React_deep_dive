@@ -1,29 +1,25 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const movieSlice = createSlice({
   name: "movie",
   initialState: {
-    moviesList: [],
-    currentActiveMovieDetail: {},
+    moviesList: {
+      bannerMovies: [],
+      mainMovies: [],
+    },
   },
 
   reducers: {
     addMoviesList: (state, action) => {
-      state.moviesList = action.payload;
-      const { id, backdrop_path } = state.moviesList[0];
+      state.moviesList.bannerMovies = action.payload;
+      const { id, backdrop_path } = state.moviesList.bannerMovies[0];
       state.currentActiveMovieDetail = { id, backdrop_path };
     },
-    updateCurrentMovie: (state, action) => {
-      const data = state?.moviesList.filter(
-        (item) => (item.id = action.payload.id)
-      );
-
-      state.currentActiveMovieDetail = data;
-
-      console.log(data);
+    addMainMovies: (state, action) => {
+      state.moviesList.mainMovies = action.payload;
     },
   },
 });
 
-export const { addMoviesList, updateCurrentMovie } = movieSlice.actions;
+export const { addMoviesList, addMainMovies } = movieSlice.actions;
 export default movieSlice.reducer;
