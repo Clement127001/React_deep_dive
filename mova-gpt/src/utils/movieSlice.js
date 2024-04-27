@@ -6,20 +6,23 @@ const movieSlice = createSlice({
     moviesList: {
       bannerMovies: [],
       mainMovies: [],
+      movieDetail: null,
     },
   },
 
   reducers: {
     addMoviesList: (state, action) => {
       state.moviesList.bannerMovies = action.payload;
-      const { id, backdrop_path } = state.moviesList.bannerMovies[0];
-      state.currentActiveMovieDetail = { id, backdrop_path };
     },
     addMainMovies: (state, action) => {
       state.moviesList.mainMovies = action.payload;
     },
+    addMovieDetails: (state, action) => {
+      state.moviesList.movieDetail = action.payload;
+    },
   },
 });
 
-export const { addMoviesList, addMainMovies } = movieSlice.actions;
+export const { addMoviesList, addMainMovies, addMovieDetails } =
+  movieSlice.actions;
 export default movieSlice.reducer;

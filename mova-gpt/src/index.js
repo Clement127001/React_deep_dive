@@ -7,6 +7,7 @@ import App from "./App";
 import Login from "./components/Login";
 import Browse from "./components/Browse";
 import Error from "./components/Error";
+import MovieDetailsContainer from "./components/MovieDetailsContainer";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/browse",
         element: <Browse />,
+      },
+      {
+        path: "/movie/:movieId",
+        element: <MovieDetailsContainer />,
       },
       {
         path: "/error",
