@@ -11,7 +11,12 @@
     border-radius: 50%;
     border-inline-end-color: transparent;
     animation: spin infinite 500ms linear;
+}
 
+.bg-image {
+    background-image: url('./asset/poster_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 

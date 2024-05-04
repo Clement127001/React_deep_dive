@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IMAGE_BASE_URL, OPTIONS } from "../utils/constants";
 import { addMoviesList } from "../utils/movieSlice";
@@ -45,7 +46,7 @@ const BannerContainer = () => {
         <img
           alt="banner"
           src={IMAGE_BASE_URL + "w1280" + currentMovie?.backdrop_path}
-          className="absolute  top-0 w-full h-full object-cover"
+          className="absolute  top-0 w-full h-full object-cover  bg-gray-300 bg-image"
         />
       </div>
 
@@ -64,9 +65,12 @@ const BannerContainer = () => {
             <button className="font-sans font-semibold text-md text-white py-2 px-4 rounded-lg cursor-pointer bg-red-600">
               Play Now
             </button>
-            <button className="font-sans font-semibold bg-gray-400 bg-opacity-70 text-white py-2 px-4 rounded-lg">
+            <Link
+              to={"/movie/" + currentMovie.id}
+              className="font-sans font-semibold bg-gray-400 bg-opacity-70 text-white py-2 px-4 rounded-lg"
+            >
               More Info
-            </button>
+            </Link>
           </div>
         </div>
       )}

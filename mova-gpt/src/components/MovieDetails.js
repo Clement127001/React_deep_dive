@@ -14,17 +14,55 @@ const MovieDetails = ({ movieDetail }) => {
   } = movieDetail;
 
   return (
-    <div className="relative bg-[#121418] w-full h-screen">
-      <div className="absolute top-12 left-[5%] w-[90%] rounded-xl z-0">
+    <div className="relative w-full h-[700px] max-lg:h-[660px]">
+      {/* backdrop and overlay */}
+      <div className="absolute lg:top-12 top-6 lg:left-[10%] lg:w-[80%] rounded-xl z-0 shadow-lg shadow-zinc-600 left-[5%] w-[90%]">
         <img
           src={IMAGE_BASE_URL + "w1280" + backdrop_path}
           alt={original_title}
-          className="h-full w-full 
-     object-cover rounded-xl"
+          className="w-full 
+     object-cover rounded-xl h-[600px] bg-gray-400 bg-image"
         />
       </div>
 
-      <div className="absolute top-12 left-[5%]  bg-gradient-to-br from-black w-[90%] h-full rounded-xl  z-10"></div>
+      <div className="absolute lg:top-12 top-6  lg:left-[10%] lg:w-[80%] bg-gradient-to-br from-black h-[600px] rounded-xl  z-1 left-[5%] w-[90%] "></div>
+
+      {/* actual content */}
+      <div className="absolute lg:top-12 top-6 lg:left-[10%] lg:w-[80%] left-[5%] w-[90%] flex lg:flex-row flex-col lg:gap-16 gap-4 lg:p-8 p-4 h-[600px] z-11">
+        <img
+          src={IMAGE_BASE_URL + "w500" + poster_path}
+          className={`lg:w-[300px] w-[180px] h-fit rounded-xl bg-image bg-gray-400`}
+        />
+
+        <div className="">
+          <h2 className="text-white font-sans font-semibold text-3xl lg:text-5xl max-w-[500px] line-clamp-2 leading-8">
+            {original_title}
+          </h2>
+          <p className="text-zinc-200 lg:text-lg  text-lg md:line-clamp-4 line-clamp-3 mt-4 max-w-[400px]">
+            {overview}
+          </p>
+          <ul className="flex gap-2 mt-4">
+            {genres.map((item) => (
+              <li className="px-[6px] py-2 rounded-lg bg-gray-600 text-white font-sans text-xs lg:px-4 lg:py-2 lg:text-[14px] font-semibold">
+                {item.name}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 max-sm:mt-4 flex gap-4 items-center">
+            <p className="text-white font-semibold text-lg border-2 border-solid border-white  px-2 rounded-lg">
+              {vote_average.toFixed(1)}
+            </p>
+            <button className="text-white bg-red-600 py-2 px-4 font-semibold font-sans lg:text-lg text-[14px] rounded-lg">
+              Watch Later
+            </button>
+
+            <button className="text-white bg-red-600 py-2 px-4 font-semibold font-sans lg:text-lg  text-[14px] rounded-lg">
+              Favorite
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

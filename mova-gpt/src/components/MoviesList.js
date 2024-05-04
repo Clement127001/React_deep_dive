@@ -13,7 +13,7 @@ const MoviesList = ({ title, movies }) => {
             item.poster_path ? (
               <Link
                 to={"/movie/" + item.id}
-                className="relative cursor-pointer"
+                className="relative cursor-pointer max-w-[300px] h-[300px] bg-gray-400 rounded-lg bg-image"
                 key={item.title}
               >
                 <img

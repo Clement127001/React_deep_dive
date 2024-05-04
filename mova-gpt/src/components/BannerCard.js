@@ -15,7 +15,7 @@ const BannerCard = ({ movie, onUpdate, active }) => {
       onClick={updateCurrentMovieHandler}
       className={`sm:w-[160px] w-[130px] h-full rounded-lg cursor-pointer ${
         active === id ? "opacity-100" : "opacity-80"
-      }`}
+      } bg-gray-300 bg-image`}
     />
   );
 };
