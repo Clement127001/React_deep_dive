@@ -54,6 +54,8 @@ const Header = () => {
                 ))}
               </select>
             )}
+
+            <NavLink to="/movie/watch-later">Watch later</NavLink>
             <button
               className="border-2  border-white py-2 px-4 rounded-lg cursor-pointer bg-transparent text-white font-sans font-semibold"
               onClick={handleSearchToggle}

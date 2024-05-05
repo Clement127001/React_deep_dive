@@ -46,7 +46,7 @@ const BannerContainer = () => {
         <img
           alt="banner"
           src={IMAGE_BASE_URL + "w1280" + currentMovie?.backdrop_path}
-          className="absolute  top-0 w-full h-full object-cover  bg-gray-300 bg-image"
+          className="absolute  top-0 w-full h-full object-cover  bg-gray-400 bg-image"
         />
       </div>
 

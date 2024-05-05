@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addWatchLater } from "../utils/movieSlice";
 import { IMAGE_BASE_URL } from "../utils/constants";
 
 const MovieDetails = ({ movieDetail }) => {
+  const dispatch = useDispatch();
+  const [animated, setAnimated] = useState(0);
+
   const {
     poster_path,
-    backdrop_path,
     id,
+    backdrop_path,
     original_title,
-    casts,
     overview,
     vote_average,
     genres,
   } = movieDetail;
+
+  const addToWatchLaterHandler = () => {
+    dispatch(addWatchLater({ id, poster_path, original_title, vote_average }));
+
+    setAnimated(1);
+  };
 
   return (
     <div className="relative w-full h-[700px] max-lg:h-[660px]">
@@ -32,6 +42,7 @@ const MovieDetails = ({ movieDetail }) => {
         <img
           src={IMAGE_BASE_URL + "w500" + poster_path}
           className={`lg:w-[300px] w-[180px] h-fit rounded-xl bg-image bg-gray-400`}
+          alt={original_title}
         />
 
         <div className="">
@@ -49,18 +60,26 @@ const MovieDetails = ({ movieDetail }) => {
             ))}
           </ul>
 
-          <div className="mt-8 max-sm:mt-4 flex gap-4 items-center">
-            <p className="text-white font-semibold text-lg border-2 border-solid border-white  px-2 rounded-lg">
-              {vote_average.toFixed(1)}
-            </p>
-            <button className="text-white bg-red-600 py-2 px-4 font-semibold font-sans lg:text-lg text-[14px] rounded-lg">
-              Watch Later
-            </button>
+          {vote_average && (
+            <div className="mt-8 max-sm:mt-4 flex gap-4 items-center">
+              <p className="text-white font-semibold text-lg border-2 border-solid border-white  px-2 rounded-lg">
+                {vote_average.toFixed(1)}
+              </p>
 
-            <button className="text-white bg-red-600 py-2 px-4 font-semibold font-sans lg:text-lg  text-[14px] rounded-lg">
-              Favorite
-            </button>
-          </div>
+              <button
+                className={`text-white bg-red-600 py-2 px-4 font-semibold font-sans lg:text-lg text-[14px] rounded-lg ${
+                  animated === 1 ? "scale-up" : ""
+                }`}
+                onAnimationEnd={() => setAnimated(0)}
+                onClick={addToWatchLaterHandler}
+              >
+                Watch Later
+              </button>
+              <button className="text-white bg-red-600 py-2 px-4 font-semibold font-sans lg:text-lg  text-[14px] rounded-lg">
+                Favorite
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

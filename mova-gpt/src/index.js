@@ -9,6 +9,7 @@ import Browse from "./components/Browse";
 import Error from "./components/Error";
 import MovieDetailsContainer from "./components/MovieDetailsContainer";
 import "./index.css";
+import WatchLater from "./components/WatchLater";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         path: "/movie/:movieId",
         element: <MovieDetailsContainer />,
       },
+      {
+        path: "/movie/watch-later",
+        element: <WatchLater />,
+      },
+
       {
         path: "/error",
         element: <Error />,
