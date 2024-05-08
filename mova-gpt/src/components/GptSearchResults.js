@@ -7,11 +7,11 @@ const GptSearchResults = () => {
   const movieLists = useSelector((store) => store.search.movieLists);
   const completedSearch = useSelector((store) => store.search.completedSearch);
 
-  if (moviesName == null || (movieLists == null && completedSearch == true))
+  if (moviesName === null || (movieLists === null && completedSearch === true))
     return (
-      <button className="w-[100px] h-fit  font-sans text-xl text-white py-2 px-4 rounded-lg cursor-pointer bg-red-600 mt-6  ">
+      <p className="w-[130px] h-fit  font-sans text-xl text-white py-2 px-4 rounded-lg cursor-pointer bg-red-600 mt-6 ">
         Loading ...
-      </button>
+      </p>
     );
   return (
     <div className="w-full relative my-12 sm:pl-12 pl-4">

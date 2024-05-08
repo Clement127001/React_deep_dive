@@ -8,7 +8,6 @@ const MovieListCard = ({ item, watchLater }) => {
   const dispatch = useDispatch();
 
   const removeWatchLaterHandler = () => {
-    console.log(item);
     dispatch(removeWatchLater(item.id));
   };
 
@@ -16,13 +15,13 @@ const MovieListCard = ({ item, watchLater }) => {
     <div>
       <Link
         to={"/movie/" + item.id}
-        className="relative cursor-pointer max-w-[300px] h-[300px] bg-gray-400 rounded-lg bg-image hover:scale-105 transition-all"
+        className="relative cursor-pointer w-[300px] h-[300px]  bg-gray-400 rounded-lg bg-image hover:scale-110 transition-all mb-10"
         key={item.title}
       >
         <img
           src={IMAGE_BASE_URL + "w300" + item.poster_path}
           alt={item.title}
-          className="rounded-lg max-w-[300px] h-[300px] object-cover"
+          className="rounded-lg max-w-[300px] max-sm:max-w-[200px] h-[300px]  max-sm:h-[200px] object-cover"
           loading="lazy"
         />
 
@@ -32,12 +31,12 @@ const MovieListCard = ({ item, watchLater }) => {
       </Link>
 
       {watchLater && (
-        <span
-          className=" bg-black text-white font-sans py-2 px-3 rounded-lg text-sm font-semibold cursor-pointer mt-2"
+        <button
+          className="mt-2 bg-black text-white font-sans py-2 px-3 rounded-lg text-sm font-semibold cursor-pointer"
           onClick={removeWatchLaterHandler}
         >
           Remove
-        </span>
+        </button>
       )}
     </div>
   );

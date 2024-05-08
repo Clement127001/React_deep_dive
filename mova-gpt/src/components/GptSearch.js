@@ -8,8 +8,8 @@ const results = [
   "Avengers",
   "Justice league",
   "Harry Potter",
-  "Inception",
-  "Interstellar",
+  "Spider man",
+  "Guardians of the galaxy",
 ];
 
 const GptSearch = () => {

@@ -75,9 +75,6 @@ const MovieDetails = ({ movieDetail }) => {
               >
                 Watch Later
               </button>
-              <button className="text-white bg-red-600 py-2 px-4 font-semibold font-sans lg:text-lg  text-[14px] rounded-lg">
-                Favorite
-              </button>
             </div>
           )}
         </div>
